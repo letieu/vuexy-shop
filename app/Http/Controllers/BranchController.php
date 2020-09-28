@@ -51,10 +51,12 @@ class BranchController extends Controller
     public function update(Request $request, $id)
     {
         try {
-            $branch = $this->branchService->update($request);
+            $branch = $this->branchService->update($request, $id);
         } catch (\Exception $exception) {
             return $this->error([], $exception->getMessage());
         }
+
+        return $branch;
     }
 
     public function destroy($id)

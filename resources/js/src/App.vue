@@ -77,6 +77,9 @@ export default {
         window.addEventListener('resize', this.handleWindowResize)
         window.addEventListener('scroll', this.handleScroll)
 
+        // init custom data
+        await this.$store.dispatch('cart/init')
+
     },
     destroyed() {
         window.removeEventListener('resize', this.handleWindowResize)

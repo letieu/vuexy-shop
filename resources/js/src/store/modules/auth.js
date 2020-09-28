@@ -32,6 +32,9 @@ const actions = {
 
         commit('SET_USER', res.data)
         commit('SET_AUTHENTICATED', true)
+    },
+    async register({commit}, userData) {
+        return await auth.register(userData)
     }
 }
 

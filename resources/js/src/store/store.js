@@ -17,13 +17,23 @@ import mutations from "./mutations"
 import actions from "./actions"
 
 import auth from "./modules/auth";
-
+import branch from "./modules/branch";
+import category from "./modules/category";
+import product from "./modules/product";
+import cart from "./modules/cart";
+import user from "./modules/user"
+import order from "./modules/order"
 Vue.use(Vuex)
-
 
 export default new Vuex.Store({
     modules: {
-      auth
+        auth,
+        category,
+        branch,
+        product,
+        cart,
+        user,
+        order
     },
     getters,
     mutations,

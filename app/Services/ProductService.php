@@ -2,7 +2,7 @@
 
 namespace App\Services;
 
-use App\Repositories\Eloquent\BaseRepository;
+use App\Helpers\ImageHelper;
 use App\Repositories\Eloquent\BranchRepository;
 use App\Repositories\Eloquent\CategoryRepository;
 use App\Repositories\Eloquent\ProductRepository;
@@ -28,16 +28,23 @@ class ProductService
 
     public function search(Request $request)
     {
-        return $this->productRepo->all($this->perPage, $request);
+        $perPage = $this->perPage;
+        if ($request->has('perPage')) {
+            $perPage = $request->perPage;
+        }
+
+        return $this->productRepo->all($perPage, $request);
     }
 
     public function create(Request $request)
     {
+        $request['image'] = ImageHelper::makeImage($request);
         return $this->productRepo->create($request->all());
     }
 
     public function update(Request $request, $id)
     {
+        $request['image'] = ImageHelper::makeImage($request);
         return $this->productRepo->update($id, $request->all());
     }
 
@@ -49,5 +56,10 @@ class ProductService
     public function destroy($id)
     {
         return $this->productRepo->delete($id);
+    }
+
+    public function findByIds(Request $request)
+    {
+        return $this->productRepo->findByIds($request->get('ids'));
     }
 }

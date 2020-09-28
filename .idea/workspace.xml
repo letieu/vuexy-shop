@@ -3,8 +3,86 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d1ff725-d7b5-4b4e-aca4-a9c4bd99c895" name="Default Changelist" comment="" />
+    <list default="true" id="8d1ff725-d7b5-4b4e-aca4-a9c4bd99c895" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Helpers/ImageHelper.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Repositories/Eloquent/OrderRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Repositories/OrderRepositoryInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Services/OrderService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/src/services/branch.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/src/services/order.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/src/services/product.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/src/services/user.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/src/store/modules/branch.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/src/store/modules/cart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/src/store/modules/order.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/src/store/modules/product.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/src/store/modules/user.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/src/views/admin/DashboardBranch.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/src/views/admin/DashboardCategory.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/src/views/admin/DashboardOrder.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/src/views/admin/components/ProductSideBar.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/src/views/shop/ProductSlider.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/src/views/shop/cart/Cart.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/src/views/shop/cart/components/ItemListView.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/src/views/shop/home/components/ItemGridView.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/src/views/shop/product/Product.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/34c8fe2f-3223-426e-8df2-d0f797b90f41.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/34c8fe2f-3223-426e-8df2-d0f797b90f41.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shop.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BranchController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BranchController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CategoryContrller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CategoryContrller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Eloquent/BaseRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Eloquent/BaseRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Eloquent/ProductRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Eloquent/ProductRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/EloquentRepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/EloquentRepositoryInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/BranchService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/BranchService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/CategoryService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/CategoryService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/ProductService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/ProductService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_20_111925_create_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_20_111925_create_products_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_23_083552_add_forienkey_to_products.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_23_083552_add_forienkey_to_products.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/chunks/0.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/chunks/0.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/chunks/1.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/chunks/1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/chunks/2.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/chunks/2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/chunks/3.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/chunks/3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/chunks/4.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/chunks/4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/chunks/5.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/chunks/5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/chunks/6.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/chunks/6.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/chunks/7.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/chunks/7.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/chunks/8.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/chunks/8.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/src/layouts/components/navbar/components/NotificationDropDown.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/layouts/components/navbar/components/NotificationDropDown.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/src/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/src/services/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/services/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/src/store/modules/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/store/modules/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/src/store/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/store/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/src/views/admin/Dashboard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/views/admin/Dashboard.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/src/views/admin/DashboardProduct.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/views/admin/DashboardProduct.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/src/views/admin/components/SideBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/views/admin/components/SideBar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/src/views/auth/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/views/auth/Login.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/src/views/shop/home/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/views/shop/home/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/themeConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/themeConfig.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,6 +98,9 @@
         <option value="composer.json" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -116,6 +197,10 @@
       <path value="$PROJECT_DIR$/vendor/sebastian/object-reflector" />
       <path value="$PROJECT_DIR$/vendor/asm89/stack-cors" />
       <path value="$PROJECT_DIR$/vendor/fruitcake/laravel-cors" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/vendor/intervention/image" />
+      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
     </include_path>
   </component>
   <component name="ProjectId" id="1hkAqN894FG9YPCXGKFSsKv8LMv" />
@@ -127,7 +212,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Services" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../full-version" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -136,11 +221,13 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/js/src/views/admin/components" />
       <recent name="$PROJECT_DIR$/app/Services" />
       <recent name="$PROJECT_DIR$/resources/js/src/views/error" />
       <recent name="$PROJECT_DIR$/resources/js/src/views/auth" />
@@ -175,18 +262,47 @@
       <workItem from="1600756936709" duration="22000" />
       <workItem from="1600785851628" duration="5106000" />
       <workItem from="1600826611901" duration="26000" />
-      <workItem from="1600848697391" duration="6536000" />
+      <workItem from="1600848697391" duration="10600000" />
+      <workItem from="1600951896463" duration="982000" />
+      <workItem from="1600954822975" duration="13457000" />
+      <workItem from="1601047201574" duration="12907000" />
+      <workItem from="1601096975731" duration="23289000" />
+      <workItem from="1601182054560" duration="10326000" />
+      <workItem from="1601192635057" duration="5117000" />
+      <workItem from="1601198502604" duration="4620000" />
+      <workItem from="1601219074096" duration="9220000" />
+      <workItem from="1601258964854" duration="38000" />
+      <workItem from="1601267559280" duration="4946000" />
+      <workItem from="1601297618140" duration="4101000" />
+      <workItem from="1601304369061" duration="1087000" />
+      <workItem from="1601305805259" duration="428000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="571" y="196" width="800" height="691" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600710955734">
       <screen x="33" y="33" width="1887" height="1047" />
     </state>
     <state x="571" y="196" width="800" height="691" key="#com.intellij.execution.impl.EditConfigurationsDialog/33.33.1887.1047@33.33.1887.1047" timestamp="1600710955734" />
+    <state x="647" y="322" width="648" height="439" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600857341490">
+      <screen x="33" y="33" width="1887" height="1047" />
+    </state>
+    <state x="647" y="322" width="648" height="439" key="#com.intellij.fileTypes.FileTypeChooser/33.33.1887.1047@33.33.1887.1047" timestamp="1600857341490" />
     <state x="737" y="141" width="464" height="804" key="#com.intellij.ide.util.MemberChooser" timestamp="1600754691274">
       <screen x="33" y="33" width="1887" height="1047" />
     </state>
@@ -199,29 +315,37 @@
       <screen x="33" y="33" width="1887" height="1047" />
     </state>
     <state x="644" y="231" width="655" height="621" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/33.33.1887.1047@33.33.1887.1047" timestamp="1600593653993" />
-    <state x="706" y="241" width="530" height="600" key="FileChooserDialogImpl" timestamp="1600826635830">
+    <state x="644" y="241" width="655" height="600" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1601225964926">
       <screen x="33" y="33" width="1887" height="1047" />
     </state>
-    <state x="706" y="241" width="530" height="600" key="FileChooserDialogImpl/33.33.1887.1047@33.33.1887.1047" timestamp="1600826635830" />
-    <state x="363" y="88" width="1226" height="907" key="SettingsEditor" timestamp="1600583630616">
+    <state x="644" y="241" width="655" height="600" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/33.33.1887.1047@33.33.1887.1047" timestamp="1601225964926" />
+    <state x="706" y="241" width="530" height="600" key="FileChooserDialogImpl" timestamp="1601272310351">
       <screen x="33" y="33" width="1887" height="1047" />
     </state>
-    <state x="363" y="88" width="1226" height="907" key="SettingsEditor/33.33.1887.1047@33.33.1887.1047" timestamp="1600583630616" />
-    <state x="782" y="290" width="390" height="512" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1600850195621">
+    <state x="706" y="241" width="530" height="600" key="FileChooserDialogImpl/33.33.1887.1047@33.33.1887.1047" timestamp="1601272310351" />
+    <state x="363" y="88" width="1226" height="907" key="SettingsEditor" timestamp="1601106841536">
       <screen x="33" y="33" width="1887" height="1047" />
     </state>
-    <state x="782" y="290" width="390" height="512" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/33.33.1887.1047@33.33.1887.1047" timestamp="1600850195621" />
-    <state x="741" y="161" width="471" height="772" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1600853442489">
+    <state x="363" y="88" width="1226" height="907" key="SettingsEditor/33.33.1887.1047@33.33.1887.1047" timestamp="1601106841536" />
+    <state x="782" y="290" width="390" height="520" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1601185069164">
       <screen x="33" y="33" width="1887" height="1047" />
     </state>
-    <state x="741" y="161" width="471" height="772" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/33.33.1887.1047@33.33.1887.1047" timestamp="1600853442489" />
-    <state x="614" y="71" width="724" height="939" key="find.popup" timestamp="1600546107883">
+    <state x="782" y="290" width="390" height="520" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/33.33.1887.1047@33.33.1887.1047" timestamp="1601185069164" />
+    <state x="741" y="161" width="471" height="774" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1601299850384">
       <screen x="33" y="33" width="1887" height="1047" />
     </state>
-    <state x="614" y="71" width="724" height="939" key="find.popup/33.33.1887.1047@33.33.1887.1047" timestamp="1600546107883" />
-    <state x="555" y="45" width="840" height="1034" key="search.everywhere.popup" timestamp="1600707869674">
+    <state x="741" y="161" width="471" height="774" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/33.33.1887.1047@33.33.1887.1047" timestamp="1601299850384" />
+    <state x="976" y="1" width="943" height="1079" key="dock-window-1" timestamp="1601062868983">
       <screen x="33" y="33" width="1887" height="1047" />
     </state>
-    <state x="555" y="45" width="840" height="1034" key="search.everywhere.popup/33.33.1887.1047@33.33.1887.1047" timestamp="1600707869674" />
+    <state x="976" y="1" width="943" height="1079" key="dock-window-1/33.33.1887.1047@33.33.1887.1047" timestamp="1601062868983" />
+    <state x="614" y="71" width="724" height="939" key="find.popup" timestamp="1601120064207">
+      <screen x="33" y="33" width="1887" height="1047" />
+    </state>
+    <state x="614" y="71" width="724" height="939" key="find.popup/33.33.1887.1047@33.33.1887.1047" timestamp="1601120064206" />
+    <state x="555" y="45" width="840" height="1034" key="search.everywhere.popup" timestamp="1601300890033">
+      <screen x="33" y="33" width="1887" height="1047" />
+    </state>
+    <state x="555" y="45" width="840" height="1034" key="search.everywhere.popup/33.33.1887.1047@33.33.1887.1047" timestamp="1601300890033" />
   </component>
 </project>

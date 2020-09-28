@@ -36,6 +36,16 @@ const router = new Router({
                     name: 'home',
                     component: () => import('./views/shop/home/Home')
                 },
+                {
+                    path: '/checkout',
+                    name: 'checkout',
+                    component: () => import('./views/shop/cart/Cart')
+                },
+                {
+                    path: '/product/:item_id',
+                    name: 'product',
+                    component: () => import('./views/shop/product/Product')
+                },
 
                 // =============================================================================
                 // Admin routes
@@ -45,7 +55,10 @@ const router = new Router({
                     name: 'dashboard',
                     component: () => import('./views/admin/Dashboard'),
                     children: [
-                        {path: '/dashboard/product', component: () => import('./views/admin/DashboardProduct')}
+                        {path: '/dashboard/product', component: () => import('./views/admin/DashboardProduct')},
+                        {path: '/dashboard/category', component:() => import('./views/admin/DashboardCategory')},
+                        {path: '/dashboard/branch', component:() => import('./views/admin/DashboardBranch')},
+                        {path: '/dashboard/order', component:() => import('./views/admin/DashboardOrder')},
                     ]
                 }
             ],

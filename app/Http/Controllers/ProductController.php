@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Helpers\ImageHelper;
 use App\Services\ProductService;
 use Illuminate\Http\Request;
 
@@ -60,6 +61,19 @@ class ProductController extends Controller
 
     public function destroy($id)
     {
-        return $this->productService->destroy($id);
+        if ($this->productService->destroy($id)) return $this->success($id, 'deleted');
+
+        return $this->error([], 'cant delete');
+    }
+
+    public function findByIds(Request $request)
+    {
+        try {
+            $products = $this->productService->findByIds($request);
+        } catch (\Exception $exception) {
+            return $this->error($exception->getMessage());
+        }
+
+        return $this->success($products);
     }
 }

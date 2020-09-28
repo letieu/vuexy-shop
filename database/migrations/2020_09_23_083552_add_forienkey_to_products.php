@@ -14,11 +14,11 @@ class AddForienkeyToProducts extends Migration
     public function up()
     {
         Schema::table('products', function (Blueprint $table) {
-            $table->unsignedBigInteger('category_id');
-            $table->unsignedBigInteger('branch_id');
+            $table->unsignedBigInteger('category_id')->nullable();
+            $table->unsignedBigInteger('branch_id')->nullable();
 
-            $table->foreign('category_id')->on('categories')->references('id');
-            $table->foreign('branch_id')->on('branches')->references('id');
+            $table->foreign('category_id')->on('categories')->references('id')->onDelete('set null');
+            $table->foreign('branch_id')->on('branches')->references('id')->onDelete('set null');
         });
     }
 

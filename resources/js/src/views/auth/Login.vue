@@ -30,6 +30,20 @@
 
                                 <div>
                                     <vs-input
+                                        v-if="registering"
+                                        name="name"
+                                        icon-no-border
+                                        icon="icon icon-user"
+                                        icon-pack="feather"
+                                        label-placeholder="User name"
+                                        v-model="name"
+                                        class="w-full"/>
+
+                                    <vs-alert :active="'name' in errors" color="danger" icon-pack="feather" icon="icon-info" v-if="'name' in errors">
+                                        <span>{{ errors.name[0] }}</span>
+                                    </vs-alert>
+
+                                    <vs-input
                                         name="email"
                                         icon-no-border
                                         icon="icon icon-user"
@@ -56,13 +70,31 @@
                                         <span>{{ errors.password[0] }}</span>
                                     </vs-alert>
 
-                                    <div class="flex flex-wrap justify-between my-5">
-                                        <vs-checkbox v-model="checkbox_remember_me" class="mb-3">Remember Me
-                                        </vs-checkbox>
-                                        <router-link to="">Forgot Password?</router-link>
-                                    </div>
-                                    <vs-button type="border">Register</vs-button>
-                                    <vs-button class="float-right" @click="submit">Login</vs-button>
+                                    <vs-input
+                                        v-if="registering"
+                                        type="password"
+                                        name="password"
+                                        icon-no-border
+                                        icon="icon icon-lock"
+                                        icon-pack="feather"
+                                        label-placeholder="Password"
+                                        v-model="password_confirmation"
+                                        class="w-full mt-6"/>
+
+                                   <template v-if="!registering">
+                                       <div class="flex flex-wrap justify-between my-5">
+                                           <vs-checkbox v-model="checkbox_remember_me" class="mb-3">Remember Me
+                                           </vs-checkbox>
+                                           <router-link to="">Forgot Password?</router-link>
+                                       </div>
+                                       <vs-button type="border" @click="registering = true">Register</vs-button>
+                                       <vs-button class="float-right" @click="submit">Login</vs-button>
+                                   </template>
+                                    <template v-else>
+                                        <vs-divider></vs-divider>
+                                        <vs-button type="border" @click="registering = false">Login</vs-button>
+                                        <vs-button class="float-right" @click="registerSubmit">Register</vs-button>
+                                    </template>
 
                                 </div>
 
@@ -82,13 +114,16 @@ export default {
     data() {
         return {
             email: "",
+            name: "",
             password: "",
             checkbox_remember_me: false,
-            errors: {}
+            errors: {},
+            registering: false,
+            password_confirmation: ""
         }
     },
     methods: {
-        ...mapActions('auth', ['login']),
+        ...mapActions('auth', ['login', 'register']),
 
         submit() {
             this.login({
@@ -99,6 +134,19 @@ export default {
             }).catch(err => {
                 this.errors = err.response.data.errors
                 console.log(this.errors)
+            })
+        },
+        registerSubmit() {
+            this.register({
+                name: this.name,
+                email: this.email,
+                password: this.password,
+                password_confirmation: this.password_confirmation
+            }).then( res => {
+                alert('reg ok');
+                this.registering = false
+            }).catch( error => {
+                this.errors = error.response.data.errors
             })
         }
     }

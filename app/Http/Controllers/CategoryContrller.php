@@ -51,10 +51,12 @@ class CategoryContrller extends Controller
     public function update(Request $request, $id)
     {
         try {
-            $category = $this->categoryService->update($request);
+            $category = $this->categoryService->update($request, $id);
         } catch (\Exception $exception) {
             return $this->error([], $exception->getMessage());
         }
+
+        return $this->success($category);
     }
 
     public function destroy($id)

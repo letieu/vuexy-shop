@@ -22,12 +22,25 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Auth::routes();
 
-Route::prefix('users')->name('user.')->group(function() {
+Route::prefix('users')->name('user.')->group(function () {
     Route::get('/', [UserController::class, 'index'])->name('index');
     Route::get('/{id}', [UserController::class, 'show'])->name('show');
     Route::delete('/{id}', [UserController::class, 'destroy'])->name('destroy');
 });
 
-Route::apiResource('products',ProductController::class);
+Route::prefix('products')->name('products.')->group(function () {
+    Route::get('/find', [App\Http\Controllers\ProductController::class, 'findByIds'])->name('find-ids');
+});
+
+Route::prefix('address')->middleware('auth:sanctum')->group(function() {
+    Route::get('/', [\App\Http\Controllers\AddressController::class, 'list']);
+    Route::post('/', [\App\Http\Controllers\AddressController::class, 'save']);
+    Route::delete('/{id}', [\App\Http\Controllers\AddressController::class, 'delete']);
+});
+
+Route::apiResource('products', ProductController::class);
 Route::apiResource('categories', CategoryContrller::class);
 Route::apiResource('branches', BranchController::class);
+Route::apiResource('orders', OrderController::class);
+
+

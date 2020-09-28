@@ -5,6 +5,7 @@ namespace App\Repositories\Eloquent;
 use App\Models\Product;
 use App\Repositories\ProductRepositoryInterface;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 
 class ProductRepository extends BaseRepository implements ProductRepositoryInterface
 {
@@ -27,6 +28,22 @@ class ProductRepository extends BaseRepository implements ProductRepositoryInter
 
     public function find($id): ?Model
     {
-        return $this->model->with('branch')->with('category')->where('id', $id)->first();
+        return $this->model::query()->whereId($id)->with('branch')->with('category')->first();
     }
+
+    public function update($id, array $attributes): ?Model
+    {
+        $product = $this->model->find($id);
+        $product->update($attributes);
+        $product['category'] = $product->category;
+        $product['branch'] = $product->branch;
+
+        return $product;
+    }
+
+    public function findByIds($ids)
+    {
+        return $this->model->whereIn('id', $ids)->get();
+    }
+
 }

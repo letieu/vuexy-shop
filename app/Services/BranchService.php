@@ -3,8 +3,7 @@
 namespace App\Services;
 
 use App\Repositories\Eloquent\BranchRepository;
-use App\Repositories\Eloquent\CategoryRepository;
-use http\Env\Request;
+use Illuminate\Http\Request;
 
 class BranchService{
     protected $branchRepo;
@@ -35,14 +34,13 @@ class BranchService{
         return $this->branchRepo->create($request->all());
     }
 
-    public function update(Request $request)
+    public function update(Request $request, $id)
     {
-        return $this->branchRepo->update($request->all());
+        return $this->branchRepo->update($id, $request->all());
     }
 
     public function destroy($id)
     {
         return $this->branchRepo->delete($id);
     }
-
 }

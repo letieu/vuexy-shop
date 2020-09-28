@@ -11,5 +11,8 @@ export default {
     },
     async user() {
         return await axios.get('/api/user')
+    },
+    async register(user) {
+        return await axios.post('api/register', user)
     }
 }

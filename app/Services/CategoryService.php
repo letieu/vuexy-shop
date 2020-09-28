@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 class CategoryService{
     protected $categoryRepo;
+    protected $productRepo;
 
     public function __construct(CategoryRepository $categoryRepo)
     {
@@ -33,9 +34,9 @@ class CategoryService{
         return $this->categoryRepo->create($request->all());
     }
 
-    public function update(Request $request)
+    public function update(Request $request, $id)
     {
-        return $this->categoryRepo->update($request->all());
+        return $this->categoryRepo->update($id, $request->all());
     }
 
     public function destroy($id)

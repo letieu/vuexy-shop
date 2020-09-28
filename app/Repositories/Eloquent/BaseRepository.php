@@ -2,6 +2,7 @@
 
 namespace App\Repositories\Eloquent;
 
+use App\Models\Product;
 use App\Repositories\EloquentRepositoryInterface;
 use Illuminate\Database\Eloquent\Model;
 
@@ -21,17 +22,23 @@ abstract class BaseRepository implements EloquentRepositoryInterface
 
     public function create(array $attributes): Model
     {
-        return $this->model->create($attributes);
+        try {
+            return $this->model->create($attributes);
+        } catch (\Exception $exception) {
+            dd($exception);
+        }
     }
 
     public function update($id, array $attributes): ?Model
     {
-        return $this->model->find($id)->update($attributes);
+        $instance = $this->model->find($id);
+        $instance->update($attributes);
+        return $instance->refresh();
     }
 
     public function delete($id): bool
     {
-        return $this->model->delete($id);
+        return $this->model->find($id)->delete() > 0;
     }
 
     public function findByName($name)

@@ -1,8 +1,9 @@
-
 <template>
     <div id="data-list-thumb-view" class="data-list-container">
 
-        <vs-table ref="table" multiple v-model="selected" pagination :max-items="itemsPerPage" search :data="products">
+        <product-side-bar :isSidebarActive="addNewDataSidebar" @closeSidebar="toggleDataSidebar" :data="sidebarData" ></product-side-bar>
+
+        <vs-table ref="table" multiple v-model="selected" :sst="true" :max-items="itemsPerPage" @search="handleSearch" search :data="products">
 
             <div slot="header" class="flex flex-wrap-reverse items-center flex-grow justify-between">
 
@@ -56,23 +57,47 @@
                     </div>
                 </div>
 
+
+                <!-- ITEMS PER PAGE -->
+                <vs-dropdown vs-trigger-click class="cursor-pointer mb-4 mr-4">
+                    <div class="p-4 border border-solid d-theme-border-grey-light rounded-full d-theme-dark-bg cursor-pointer flex items-center justify-between font-medium">
+                        <span class="mr-2">{{ currentPage * itemsPerPage - (itemsPerPage - 1) }} - {{ products.length - currentPage * itemsPerPage > 0 ? currentPage * itemsPerPage : products.length }} of {{ queriedItems }}</span>
+                        <feather-icon icon="ChevronDownIcon" svgClasses="h-4 w-4" />
+                    </div>
+                    <!-- <vs-button class="btn-drop" type="line" color="primary" icon-pack="feather" icon="icon-chevron-down"></vs-button> -->
+                    <vs-dropdown-menu>
+
+                        <vs-dropdown-item @click="itemsPerPage=4">
+                            <span>4</span>
+                        </vs-dropdown-item>
+                        <vs-dropdown-item @click="itemsPerPage=10">
+                            <span>10</span>
+                        </vs-dropdown-item>
+                        <vs-dropdown-item @click="itemsPerPage=15">
+                            <span>15</span>
+                        </vs-dropdown-item>
+                        <vs-dropdown-item @click="itemsPerPage=20">
+                            <span>20</span>
+                        </vs-dropdown-item>
+                    </vs-dropdown-menu>
+                </vs-dropdown>
             </div>
 
             <template slot="thead">
                 <vs-th>Image</vs-th>
                 <vs-th sort-key="name">Name</vs-th>
                 <vs-th sort-key="category">Category</vs-th>
-                <vs-th sort-key="order_status">Order Status</vs-th>
+                <vs-th sort-key="branch">Branch</vs-th>
                 <vs-th sort-key="price">Price</vs-th>
                 <vs-th>Action</vs-th>
             </template>
 
             <template slot-scope="{data}">
                 <tbody>
-                <vs-tr :data="tr" :key="indextr" v-for="(tr, indextr) in data">
+                <vs-tr :data="tr" :key="tr.id" v-for="tr in data">
 
                     <vs-td class="img-container">
-                        <img :src="tr.img" class="product-img" />
+                        <img :src="/images/ + tr.image" class="product-img" />
                     </vs-td>
 
                     <vs-td>
@@ -80,11 +105,11 @@
                     </vs-td>
 
                     <vs-td>
-                        <p class="product-category">{{ tr.category }}</p>
+                        <p class="product-category">{{ tr.category.name }}</p>
                     </vs-td>
 
                     <vs-td>
-                        <vs-chip :color="getOrderStatusColor(tr.order_status)" class="product-order-status">{{ tr.order_status | title }}</vs-chip>
+                        <vs-chip :color="randomColor" class="product-category" >{{ tr.branch.name }}</vs-chip>
                     </vs-td>
 
                     <vs-td>
@@ -100,70 +125,101 @@
                 </tbody>
             </template>
         </vs-table>
+        <vs-pagination :total="totalPage" v-model="page" v-if="isMounted"></vs-pagination>
+
     </div>
 </template>
 
 <script>
 
+import {mapGetters} from "vuex";
+import ProductSideBar from "./components/ProductSideBar";
 export default {
-
+    components: {
+        ProductSideBar
+    },
     data() {
         return {
             selected: [],
-            // products: [],
             itemsPerPage: 4,
+            totalPage: 0,
+            page: 1,
             isMounted: false,
             addNewDataSidebar: false,
             sidebarData: {},
+            searchString: ""
+        }
+    },
+    watch: {
+        page(page) {
+            this.fetchProducts({
+                page,
+                perPage: this.itemsPerPage,
+                name: this.searchString
+            })
         }
     },
     computed: {
+        products() {
+            return this.$store.getters['product/list']
+        },
         currentPage() {
             if(this.isMounted) {
                 return this.$refs.table.currentx
             }
             return 0
         },
-        products() {
-        },
         queriedItems() {
             return this.$refs.table ? this.$refs.table.queriedResults.length : this.products.length
+        },
+        randomColor() {
+
+            let r = Math.floor(Math.random() * 3)
+            if (r == 1) return 'success'
+            if (r == 2) return 'danger'
+            if (r == 3) return 'primary'
+            return 'blue'
         }
     },
     methods: {
+        handleSearch(input) {
+            this.searchString = input
+            this.fetchProducts({
+                name: input,
+                perPage: this.itemsPerPage
+            })
+        },
         addNewData() {
             this.sidebarData = {}
             this.toggleDataSidebar(true)
         },
         deleteData(id) {
+            this.$store.dispatch("product/delete", id).catch(err => { console.error(err) })
         },
         editData(data) {
             // this.sidebarData = JSON.parse(JSON.stringify(this.blankData))
             this.sidebarData = data
             this.toggleDataSidebar(true)
         },
-        getOrderStatusColor(status) {
-            if(status == 'on_hold') return "warning"
-            if(status == 'delivered') return "success"
-            if(status == 'canceled') return "danger"
-            return "primary"
-        },
-        getPopularityColor(num) {
-            if(num > 90) return "success"
-            if(num >70) return "primary"
-            if(num >= 50) return "warning"
-            if(num < 50) return "danger"
-            return "primary"
-        },
+
         toggleDataSidebar(val=false) {
             this.addNewDataSidebar = val
-        }
+        },
+        fetchProducts(params) {
+            this.$store.dispatch("product/fetchProducts", params)
+        },
+
     },
     created() {
-
+        this.$store.dispatch("product/fetchProducts", {
+            perPage : this.itemsPerPage
+        }).then(res => {
+            this.totalPage = res.last_page
+        })
     },
     mounted() {
         this.isMounted = true;
+        console.log('product mounted')
     }
 }
 </script>

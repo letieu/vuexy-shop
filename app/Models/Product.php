@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
-    protected $fillable = ['name', 'price', 'description', 'category_id', 'branch_id'];
+    protected $fillable = ['name', 'price', 'description', 'category_id', 'branch_id', 'image'];
 
     public function category()
     {
@@ -29,8 +29,8 @@ class Product extends Model
 
     public function scopeCategory($query, $request)
     {
-        if ($request->has('categoryId')) {
-            $query->were('category_id', $request['categoryId']);
+        if ($request->has('category')) {
+            $query->where('category_id', $request['category']);
         }
 
         return $query;
@@ -38,8 +38,8 @@ class Product extends Model
 
     public function scopeBranch($query, $request)
     {
-        if ($request->has('branchId')) {
-            $query->where('branch_id', $request['branchId']);
+        if ($request->has('branch')) {
+            $query->where('branch_id', $request['branch']);
         }
 
         return $query;
@@ -48,7 +48,7 @@ class Product extends Model
     public function scopePrice($query, $request)
     {
         if ($request->has('price')) {
-            $query->where('price', '<', $request['price']);
+            $query->where('price', '<', $request['price'] * 10000);
         }
 
         return $query;

@@ -28,6 +28,10 @@ export default {
     },
 
     mounted() {
+        this.$store.dispatch('category/fetchCategories')
+        this.$store.dispatch('branch/fetchBranches')
+
+        console.log('dash board')
     }
 }
 
