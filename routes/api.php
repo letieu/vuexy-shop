@@ -30,6 +30,8 @@ Route::prefix('users')->name('user.')->group(function () {
 
 Route::prefix('products')->name('products.')->group(function () {
     Route::get('/find', [App\Http\Controllers\ProductController::class, 'findByIds'])->name('find-ids');
+    Route::get('/{id}/comments', [App\Http\Controllers\ProductController::class, 'getComments']);
+    Route::post('/{id}/comments', [App\Http\Controllers\ProductController::class, 'addComment']);
 });
 
 Route::prefix('address')->middleware('auth:sanctum')->group(function() {
@@ -42,5 +44,3 @@ Route::apiResource('products', ProductController::class);
 Route::apiResource('categories', CategoryContrller::class);
 Route::apiResource('branches', BranchController::class);
 Route::apiResource('orders', OrderController::class);
-
-

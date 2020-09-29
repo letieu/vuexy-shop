@@ -9,9 +9,18 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var vue_star_rating__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-star-rating */ "./node_modules/vue-star-rating/dist/star-rating.min.js");
-/* harmony import */ var vue_star_rating__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_star_rating__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _ProductSlider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../ProductSlider */ "./resources/js/src/views/shop/ProductSlider.vue");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var vue_star_rating__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-star-rating */ "./node_modules/vue-star-rating/dist/star-rating.min.js");
+/* harmony import */ var vue_star_rating__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vue_star_rating__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _ProductSlider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../ProductSlider */ "./resources/js/src/views/shop/ProductSlider.vue");
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+//
 //
 //
 //
@@ -123,14 +132,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
-    StarRating: vue_star_rating__WEBPACK_IMPORTED_MODULE_0___default.a,
-    ProductSlider: _ProductSlider__WEBPACK_IMPORTED_MODULE_1__["default"]
+    StarRating: vue_star_rating__WEBPACK_IMPORTED_MODULE_1___default.a,
+    ProductSlider: _ProductSlider__WEBPACK_IMPORTED_MODULE_2__["default"]
   },
   data: function data() {
     return {
       item_data: null,
       error_occured: false,
-      error_msg: "" // Related Products Swiper
+      error_msg: "",
+      commentPagination: {
+        total: 1,
+        page: 1
+      },
+      newComment: "" // Related Products Swiper
 
     };
   },
@@ -144,6 +158,9 @@ __webpack_require__.r(__webpack_exports__);
       return function (itemId) {
         return _this.$store.getters['cart/isInCart'](itemId);
       };
+    },
+    comments: function comments() {
+      return this.$store.state.comment.all;
     }
   },
   methods: {
@@ -153,7 +170,7 @@ __webpack_require__.r(__webpack_exports__);
     // toggleItemInCart(item) {
     //     this.$store.dispatch('eCommerce/toggleItemInCart', item)
     // },
-    fetch_item_details: function fetch_item_details(id) {
+    fetchItemDetails: function fetchItemDetails(id) {
       var _this2 = this;
 
       this.$store.dispatch('product/detail', id).catch(function (err) {
@@ -163,12 +180,55 @@ __webpack_require__.r(__webpack_exports__);
       }).then(function (res) {
         _this2.item_data = res.data.data;
       });
+    },
+    fetchItemComments: function fetchItemComments(id) {
+      var _this3 = this;
+
+      this.$store.dispatch('comment/fetchComments', id).then(function (res) {
+        _this3.commentPagination = {
+          total: res.data.data.last_page,
+          page: res.data.data.current_page
+        };
+        console.log(_this3.comments, 'asdfjlj');
+      }).catch(function (e) {
+        return console.log(e);
+      });
+    },
+    postComment: function postComment() {
+      this.$store.dispatch('comment/postComment', {
+        productId: this.productId,
+        text: this.newComment
+      });
     }
   },
-  created: function created() {
-    console.log(this.$route.params.item_id);
-    this.fetch_item_details(this.$route.params.item_id);
-  }
+  created: function () {
+    var _created = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              this.productId = this.$route.params.item_id;
+              _context.next = 3;
+              return this.fetchItemDetails(this.productId);
+
+            case 3:
+              _context.next = 5;
+              return this.fetchItemComments(this.productId);
+
+            case 5:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, _callee, this);
+    }));
+
+    function created() {
+      return _created.apply(this, arguments);
+    }
+
+    return created;
+  }()
 });
 
 /***/ }),
@@ -441,105 +501,101 @@ var render = function() {
                     ])
                   ]),
                   _vm._v(" "),
-                  _c(
-                    "div",
-                    {
-                      staticClass: "py-24 mb-16 mt-10 text-center item-features"
-                    },
-                    [
-                      _c("div", { staticClass: "vx-row" }, [
-                        _c("div", { staticClass: "vx-col md:w-1/3 w-full" }, [
-                          _c(
-                            "div",
-                            { staticClass: "w-64 mx-auto mb-16 md:mb-0" },
+                  _c("div", [
+                    _c("div", { staticClass: "comments-container mt-4" }, [
+                      _c(
+                        "ul",
+                        { staticClass: "user-comments-list" },
+                        _vm._l(_vm.comments, function(comment, index) {
+                          return _c(
+                            "li",
+                            {
+                              key: index,
+                              staticClass:
+                                "commented-user flex items-center mb-4"
+                            },
                             [
-                              _c("feather-icon", {
-                                staticClass: "block mb-4",
-                                attrs: {
-                                  icon: "AwardIcon",
-                                  svgClasses:
-                                    "h-12 w-12 text-primary stroke-current"
-                                }
-                              }),
-                              _vm._v(" "),
                               _c(
-                                "span",
-                                { staticClass: "font-semibold text-lg" },
-                                [_vm._v("100% Original")]
+                                "div",
+                                { staticClass: "mr-3" },
+                                [
+                                  _c("vs-avatar", {
+                                    staticClass: "m-0",
+                                    attrs: { src: "", size: "30px" }
+                                  })
+                                ],
+                                1
                               ),
                               _vm._v(" "),
-                              _c("p", { staticClass: "mt-2" }, [
-                                _vm._v(
-                                  "Chocolate bar candy canes ice cream toffee cookie halvah."
+                              _c("div", { staticClass: "leading-tight" }, [
+                                _c("p", { staticClass: "font-medium" }, [
+                                  _vm._v(_vm._s(comment.user.name))
+                                ]),
+                                _vm._v(" "),
+                                _c("span", { staticClass: "text-xs" }, [
+                                  _vm._v(_vm._s(comment.text))
+                                ])
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "ml-auto" }, [
+                                _c(
+                                  "div",
+                                  { staticClass: "flex" },
+                                  [
+                                    _c("feather-icon", {
+                                      staticClass: "mr-2 cursor-pointer",
+                                      attrs: {
+                                        icon: "HeartIcon",
+                                        svgClasses: "h-4 w-4"
+                                      }
+                                    }),
+                                    _vm._v(" "),
+                                    _c("feather-icon", {
+                                      staticClass: "cursor-pointer",
+                                      attrs: {
+                                        icon: "MessageSquareIcon",
+                                        svgClasses: "h-4 w-4"
+                                      }
+                                    })
+                                  ],
+                                  1
                                 )
                               ])
-                            ],
-                            1
+                            ]
                           )
-                        ]),
+                        }),
+                        0
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "post-comment" },
+                      [
+                        _c("vs-textarea", {
+                          staticClass: "mb-2",
+                          attrs: { label: "Add Comment" },
+                          model: {
+                            value: _vm.newComment,
+                            callback: function($$v) {
+                              _vm.newComment = $$v
+                            },
+                            expression: "newComment"
+                          }
+                        }),
                         _vm._v(" "),
-                        _c("div", { staticClass: "vx-col md:w-1/3 w-full" }, [
-                          _c(
-                            "div",
-                            { staticClass: "w-64 mx-auto mb-16 md:mb-0" },
-                            [
-                              _c("feather-icon", {
-                                staticClass: "block mb-4",
-                                attrs: {
-                                  icon: "ClockIcon",
-                                  svgClasses:
-                                    "h-12 w-12 text-primary stroke-current"
-                                }
-                              }),
-                              _vm._v(" "),
-                              _c(
-                                "span",
-                                { staticClass: "font-semibold text-lg" },
-                                [_vm._v("10 Day Replacement")]
-                              ),
-                              _vm._v(" "),
-                              _c("p", { staticClass: "mt-2" }, [
-                                _vm._v(
-                                  "Marshmallow biscuit donut dragée fruitcake wafer."
-                                )
-                              ])
-                            ],
-                            1
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "vx-col md:w-1/3 w-full" }, [
-                          _c(
-                            "div",
-                            { staticClass: "w-64 mx-auto" },
-                            [
-                              _c("feather-icon", {
-                                staticClass: "block mb-4",
-                                attrs: {
-                                  icon: "ShieldIcon",
-                                  svgClasses:
-                                    "h-12 w-12 text-primary stroke-current"
-                                }
-                              }),
-                              _vm._v(" "),
-                              _c(
-                                "span",
-                                { staticClass: "font-semibold text-lg" },
-                                [_vm._v("1 Year Warranty")]
-                              ),
-                              _vm._v(" "),
-                              _c("p", { staticClass: "mt-2" }, [
-                                _vm._v(
-                                  "Cotton candy gingerbread cake I love sugar sweet."
-                                )
-                              ])
-                            ],
-                            1
-                          )
-                        ])
-                      ])
-                    ]
-                  )
+                        _c(
+                          "vs-button",
+                          {
+                            attrs: { size: "small" },
+                            on: { click: _vm.postComment }
+                          },
+                          [_vm._v("Post Comment")]
+                        )
+                      ],
+                      1
+                    )
+                  ])
                 ])
               ])
             ],

@@ -68392,7 +68392,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
       path: '/',
       name: 'home',
       component: function component() {
-        return Promise.all(/*! import() */[__webpack_require__.e(2), __webpack_require__.e(1), __webpack_require__.e(4)]).then(__webpack_require__.bind(null, /*! ./views/shop/home/Home */ "./resources/js/src/views/shop/home/Home.vue"));
+        return Promise.all(/*! import() */[__webpack_require__.e(18), __webpack_require__.e(1), __webpack_require__.e(4)]).then(__webpack_require__.bind(null, /*! ./views/shop/home/Home */ "./resources/js/src/views/shop/home/Home.vue"));
       }
     }, {
       path: '/checkout',
@@ -68404,7 +68404,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
       path: '/product/:item_id',
       name: 'product',
       component: function component() {
-        return Promise.all(/*! import() */[__webpack_require__.e(2), __webpack_require__.e(1), __webpack_require__.e(11)]).then(__webpack_require__.bind(null, /*! ./views/shop/product/Product */ "./resources/js/src/views/shop/product/Product.vue"));
+        return Promise.all(/*! import() */[__webpack_require__.e(18), __webpack_require__.e(1), __webpack_require__.e(11)]).then(__webpack_require__.bind(null, /*! ./views/shop/product/Product */ "./resources/js/src/views/shop/product/Product.vue"));
       }
     }, // =============================================================================
     // Admin routes
@@ -68840,6 +68840,82 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     }
 
     return _delete;
+  }()
+});
+
+/***/ }),
+
+/***/ "./resources/js/src/services/comment.js":
+/*!**********************************************!*\
+  !*** ./resources/js/src/services/comment.js ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../axios */ "./resources/js/src/axios.js");
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  list: function () {
+    var _list = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(productId) {
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              _context.next = 2;
+              return _axios__WEBPACK_IMPORTED_MODULE_1__["default"].get("/api/products/".concat(productId, "/comments"));
+
+            case 2:
+              return _context.abrupt("return", _context.sent);
+
+            case 3:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, _callee);
+    }));
+
+    function list(_x) {
+      return _list.apply(this, arguments);
+    }
+
+    return list;
+  }(),
+  post: function () {
+    var _post = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2(productId, params) {
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
+        while (1) {
+          switch (_context2.prev = _context2.next) {
+            case 0:
+              _context2.next = 2;
+              return _axios__WEBPACK_IMPORTED_MODULE_1__["default"].post("/api/products/".concat(productId, "/comments"), params);
+
+            case 2:
+              return _context2.abrupt("return", _context2.sent);
+
+            case 3:
+            case "end":
+              return _context2.stop();
+          }
+        }
+      }, _callee2);
+    }));
+
+    function post(_x2, _x3) {
+      return _post.apply(this, arguments);
+    }
+
+    return post;
   }()
 });
 
@@ -69989,6 +70065,115 @@ var actions = {
 
 /***/ }),
 
+/***/ "./resources/js/src/store/modules/comment.js":
+/*!***************************************************!*\
+  !*** ./resources/js/src/store/modules/comment.js ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _services_comment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/comment */ "./resources/js/src/services/comment.js");
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+
+
+var state = function state() {
+  return {
+    all: []
+  };
+};
+
+var mutations = {
+  SET_COMMENTS: function SET_COMMENTS(state, comments) {
+    state.all = comments;
+  },
+  ADD_COMMENT: function ADD_COMMENT(state, comment) {
+    state.all.push(comment);
+  }
+};
+var actions = {
+  fetchComments: function () {
+    var _fetchComments = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(_ref, productId) {
+      var commit, res;
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              commit = _ref.commit;
+              _context.next = 3;
+              return _services_comment__WEBPACK_IMPORTED_MODULE_1__["default"].list(productId);
+
+            case 3:
+              res = _context.sent;
+              commit('SET_COMMENTS', res.data.data.data);
+              return _context.abrupt("return", res);
+
+            case 6:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, _callee);
+    }));
+
+    function fetchComments(_x, _x2) {
+      return _fetchComments.apply(this, arguments);
+    }
+
+    return fetchComments;
+  }(),
+  postComment: function () {
+    var _postComment = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2(_ref2, _ref3) {
+      var commit, productId, text, res;
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
+        while (1) {
+          switch (_context2.prev = _context2.next) {
+            case 0:
+              commit = _ref2.commit;
+              productId = _ref3.productId, text = _ref3.text;
+              console.log(text);
+              _context2.next = 5;
+              return _services_comment__WEBPACK_IMPORTED_MODULE_1__["default"].post(productId, {
+                text: text
+              });
+
+            case 5:
+              res = _context2.sent;
+              commit('ADD_COMMENT', res.data.data);
+              return _context2.abrupt("return", res);
+
+            case 8:
+            case "end":
+              return _context2.stop();
+          }
+        }
+      }, _callee2);
+    }));
+
+    function postComment(_x3, _x4) {
+      return _postComment.apply(this, arguments);
+    }
+
+    return postComment;
+  }()
+};
+/* harmony default export */ __webpack_exports__["default"] = ({
+  namespaced: true,
+  state: state,
+  actions: actions,
+  mutations: mutations
+});
+
+/***/ }),
+
 /***/ "./resources/js/src/store/modules/order.js":
 /*!*************************************************!*\
   !*** ./resources/js/src/store/modules/order.js ***!
@@ -70636,6 +70821,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_cart__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/cart */ "./resources/js/src/store/modules/cart.js");
 /* harmony import */ var _modules_user__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./modules/user */ "./resources/js/src/store/modules/user.js");
 /* harmony import */ var _modules_order__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./modules/order */ "./resources/js/src/store/modules/order.js");
+/* harmony import */ var _modules_comment__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./modules/comment */ "./resources/js/src/store/modules/comment.js");
 /*=========================================================================================
   File Name: store.js
   Description: Vuex store
@@ -70644,6 +70830,7 @@ __webpack_require__.r(__webpack_exports__);
   Author: Pixinvent
   Author URL: http://www.themeforest.net/user/pixinvent
 ==========================================================================================*/
+
 
 
 
@@ -70666,7 +70853,8 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vuex__WEBPACK_IMPORTED_MODULE_1__
     product: _modules_product__WEBPACK_IMPORTED_MODULE_9__["default"],
     cart: _modules_cart__WEBPACK_IMPORTED_MODULE_10__["default"],
     user: _modules_user__WEBPACK_IMPORTED_MODULE_11__["default"],
-    order: _modules_order__WEBPACK_IMPORTED_MODULE_12__["default"]
+    order: _modules_order__WEBPACK_IMPORTED_MODULE_12__["default"],
+    comment: _modules_comment__WEBPACK_IMPORTED_MODULE_13__["default"]
   },
   getters: _getters__WEBPACK_IMPORTED_MODULE_3__["default"],
   mutations: _mutations__WEBPACK_IMPORTED_MODULE_4__["default"],

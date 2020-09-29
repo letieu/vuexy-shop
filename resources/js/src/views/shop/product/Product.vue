@@ -70,32 +70,33 @@
                         </div>
                     </div>
 
-                    <!-- Product Feature/Meta Row -->
-                    <div class="py-24 mb-16 mt-10 text-center item-features">
-                        <div class="vx-row">
-                            <div class="vx-col md:w-1/3 w-full">
-                                <div class="w-64 mx-auto mb-16 md:mb-0">
-                                    <feather-icon icon="AwardIcon" svgClasses="h-12 w-12 text-primary stroke-current" class="block mb-4" />
-                                    <span class="font-semibold text-lg">100% Original</span>
-                                    <p class="mt-2">Chocolate bar candy canes ice cream toffee cookie halvah.</p>
-                                </div>
-                            </div>
-                            <div class="vx-col md:w-1/3 w-full">
-                                <div class="w-64 mx-auto mb-16 md:mb-0">
-                                    <feather-icon icon="ClockIcon" svgClasses="h-12 w-12 text-primary stroke-current" class="block mb-4" />
-                                    <span class="font-semibold text-lg">10 Day Replacement</span>
-                                    <p class="mt-2">Marshmallow biscuit donut dragée fruitcake wafer.</p>
-                                </div>
-                            </div>
-                            <div class="vx-col md:w-1/3 w-full">
-                                <div class="w-64 mx-auto">
-                                    <feather-icon icon="ShieldIcon" svgClasses="h-12 w-12 text-primary stroke-current" class="block mb-4" />
-                                    <span class="font-semibold text-lg">1 Year Warranty</span>
-                                    <p class="mt-2">Cotton candy gingerbread cake I love sugar sweet.</p>
-                                </div>
-                            </div>
+                    <!-- Comment -->
+                    <div>
+
+                        <div class="comments-container mt-4">
+                            <ul class="user-comments-list">
+                                <li v-for="(comment, index) in comments" :key="index" class="commented-user flex items-center mb-4">
+                                    <div class="mr-3"><vs-avatar class="m-0" src="" size="30px" /></div>
+                                    <div class="leading-tight">
+                                        <p class="font-medium">{{ comment.user.name }}</p>
+                                        <span class="text-xs">{{ comment.text }}</span>
+                                    </div>
+                                    <div class="ml-auto">
+                                        <div class="flex">
+                                            <feather-icon icon="HeartIcon" svgClasses="h-4 w-4" class="mr-2 cursor-pointer"></feather-icon>
+                                            <feather-icon icon="MessageSquareIcon" svgClasses="h-4 w-4" class="cursor-pointer"></feather-icon>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <div class="post-comment">
+                            <vs-textarea label="Add Comment" class="mb-2" v-model="newComment" />
+                            <vs-button size="small" @click="postComment">Post Comment</vs-button>
                         </div>
                     </div>
+
 
                 </div>
 
@@ -119,9 +120,12 @@ export default{
             item_data: null,
             error_occured: false,
             error_msg: "",
-
+            commentPagination: {
+                total: 1,
+                page: 1
+            },
+            newComment: ""
             // Related Products Swiper
-
         }
     },
     computed: {
@@ -131,6 +135,10 @@ export default{
         isInCart() {
             return (itemId) => this.$store.getters['cart/isInCart'](itemId)
         },
+
+        comments() {
+            return this.$store.state.comment.all;
+        }
     },
     methods: {
         // toggleItemInWishList(item) {
@@ -139,7 +147,7 @@ export default{
         // toggleItemInCart(item) {
         //     this.$store.dispatch('eCommerce/toggleItemInCart', item)
         // },
-        fetch_item_details(id) {
+        fetchItemDetails(id) {
             this.$store.dispatch('product/detail', id)
                 .catch(err => {
                     this.error_occured = true
@@ -149,12 +157,29 @@ export default{
                 .then (res=>{
                     this.item_data = res.data.data
                 })
+        },
+        fetchItemComments(id) {
+            this.$store.dispatch('comment/fetchComments', id)
+            .then(res => {
+                this.commentPagination = {
+                    total: res.data.data.last_page,
+                    page: res.data.data.current_page
+                }
 
+                console.log(this.comments, 'asdfjlj')
+            }).catch(e => console.log(e))
+        },
+        postComment() {
+            this.$store.dispatch('comment/postComment', {
+                productId: this.productId,
+                text: this.newComment
+            })
         }
     },
-    created() {
-        console.log(this.$route.params.item_id)
-        this.fetch_item_details(this.$route.params.item_id)
+    async created() {
+        this.productId = this.$route.params.item_id;
+        await this.fetchItemDetails(this.productId)
+        await this.fetchItemComments(this.productId)
     }
 }
 </script>
