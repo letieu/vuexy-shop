@@ -307,7 +307,9 @@ var render = function() {
                 "div",
                 { staticClass: "con-exemple-prompt" },
                 [
-                  _vm._v("\n                Nam of branch:\n                "),
+                  _vm._v(
+                    "\n                Tên thương hiệu :\n                "
+                  ),
                   _c("vs-input", {
                     staticClass: "mt-4 mb-2 w-full",
                     attrs: { placeholder: "Name" },
@@ -335,7 +337,7 @@ var render = function() {
                     },
                     [
                       _vm._v(
-                        "\n                    Fields can not be empty please enter the data\n                "
+                        "\n                    Không được để trống\n                "
                       )
                     ]
                   )
@@ -354,13 +356,13 @@ var render = function() {
         [
           _c("vs-th", { attrs: { "sort-key": "email" } }, [_vm._v("ID")]),
           _vm._v(" "),
-          _c("vs-th", { attrs: { "sort-key": "username" } }, [_vm._v("Name")]),
+          _c("vs-th", { attrs: { "sort-key": "username" } }, [_vm._v("Tên ")]),
           _vm._v(" "),
           _c("vs-th", { attrs: { "sort-key": "website" } }, [
-            _vm._v("Products")
+            _vm._v("Số sản phẩm")
           ]),
           _vm._v(" "),
-          _c("vs-th", { attrs: { "sort-key": "id" } }, [_vm._v("Created")]),
+          _c("vs-th", { attrs: { "sort-key": "id" } }, [_vm._v("Đã tạo")]),
           _vm._v(" "),
           _c("vs-th", [_vm._v("Actions")])
         ],

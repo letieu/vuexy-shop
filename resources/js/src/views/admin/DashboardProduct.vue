@@ -22,30 +22,11 @@
                             <vs-dropdown-item>
                 <span class="flex items-center">
                   <feather-icon icon="TrashIcon" svgClasses="h-4 w-4" class="mr-2" />
-                  <span>Delete</span>
+                  <span>Xóa</span>
                 </span>
                             </vs-dropdown-item>
 
-                            <vs-dropdown-item>
-                <span class="flex items-center">
-                  <feather-icon icon="ArchiveIcon" svgClasses="h-4 w-4" class="mr-2" />
-                  <span>Archive</span>
-                </span>
-                            </vs-dropdown-item>
-
-                            <vs-dropdown-item>
-                <span class="flex items-center">
-                  <feather-icon icon="FileIcon" svgClasses="h-4 w-4" class="mr-2" />
-                  <span>Print</span>
-                </span>
-                            </vs-dropdown-item>
-
-                            <vs-dropdown-item>
-                <span class="flex items-center">
-                  <feather-icon icon="SaveIcon" svgClasses="h-4 w-4" class="mr-2" />
-                  <span>Another Action</span>
-                </span>
-                            </vs-dropdown-item>
+             
 
                         </vs-dropdown-menu>
                     </vs-dropdown>
@@ -53,7 +34,7 @@
                     <!-- ADD NEW -->
                     <div class="p-3 mb-4 mr-4 rounded-lg cursor-pointer flex items-center justify-between text-lg font-medium text-base text-primary border border-solid border-primary" @click="addNewData">
                         <feather-icon icon="PlusIcon" svgClasses="h-4 w-4" />
-                        <span class="ml-2 text-base text-primary">Add New</span>
+                        <span class="ml-2 text-base text-primary">Tạo mới</span>
                     </div>
                 </div>
 
@@ -85,11 +66,11 @@
 
             <template slot="thead">
                 <vs-th>Image</vs-th>
-                <vs-th sort-key="name">Name</vs-th>
-                <vs-th sort-key="category">Category</vs-th>
-                <vs-th sort-key="branch">Branch</vs-th>
-                <vs-th sort-key="price">Price</vs-th>
-                <vs-th>Action</vs-th>
+                <vs-th sort-key="name">Tên </vs-th>
+                <vs-th sort-key="category">Loại sản phẩm</vs-th>
+                <vs-th sort-key="branch">Thương hiệu</vs-th>
+                <vs-th sort-key="price">Giá</vs-th>
+                <vs-th>Menu</vs-th>
             </template>
 
             <template slot-scope="{data}">
@@ -113,7 +94,7 @@
                     </vs-td>
 
                     <vs-td>
-                        <p class="product-price">${{ tr.price }}</p>
+                        <p class="product-price">{{ tr.price }} đ</p>
                     </vs-td>
 
                     <vs-td class="whitespace-no-wrap">

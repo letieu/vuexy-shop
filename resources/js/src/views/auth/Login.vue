@@ -1,12 +1,3 @@
-<!-- =========================================================================================
-    File Name: Login.vue
-    Description: Login Page
-    ----------------------------------------------------------------------------------------
-    Item Name: Vuexy - Vuejs, HTML & Laravel Admin Dashboard Template
-      Author: Pixinvent
-    Author URL: http://www.themeforest.net/user/pixinvent
-========================================================================================== -->
-
 
 <template>
     <div class="h-screen flex w-full bg-img vx-row no-gutter items-center justify-center" id="page-login">
@@ -25,7 +16,7 @@
 
                                 <div class="vx-card__title mb-4">
                                     <h4 class="mb-4">Login</h4>
-                                    <p>Welcome back, please login to your account.</p>
+                                    <p>Chào mừng bạn quay lại, Hãy đăng nhập để mua hàng </p>
                                 </div>
 
                                 <div>
@@ -88,12 +79,12 @@
                                            <router-link to="">Forgot Password?</router-link>
                                        </div>
                                        <vs-button type="border" @click="registering = true">Register</vs-button>
-                                       <vs-button class="float-right" @click="submit">Login</vs-button>
+                                       <vs-button class="float-right" @click="submit">Đăng nhập </vs-button>
                                    </template>
                                     <template v-else>
                                         <vs-divider></vs-divider>
                                         <vs-button type="border" @click="registering = false">Login</vs-button>
-                                        <vs-button class="float-right" @click="registerSubmit">Register</vs-button>
+                                        <vs-button class="float-right" @click="registerSubmit">Đăng ký</vs-button>
                                     </template>
 
                                 </div>

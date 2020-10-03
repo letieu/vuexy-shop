@@ -432,7 +432,7 @@ var render = function() {
             "tab-content",
             {
               staticClass: "mb-5",
-              attrs: { title: "Cart", icon: "feather icon-shopping-cart" }
+              attrs: { title: "GIỎ HÀNG", icon: "feather icon-shopping-cart" }
             },
             [
               _vm.cartItems.length
@@ -481,13 +481,13 @@ var render = function() {
                                     _c(
                                       "p",
                                       { staticClass: "text-success text-sm" },
-                                      [_vm._v("In Stock")]
+                                      [_vm._v("Còn hành ")]
                                     ),
                                     _vm._v(" "),
                                     _c(
                                       "p",
                                       { staticClass: "mt-4 font-bold text-sm" },
-                                      [_vm._v("Quantity")]
+                                      [_vm._v("Số lượng ")]
                                     ),
                                     _vm._v(" "),
                                     _c("vs-input-number", {
@@ -536,7 +536,7 @@ var render = function() {
                                           staticClass:
                                             "text-sm font-semibold ml-2"
                                         },
-                                        [_vm._v("REMOVE")]
+                                        [_vm._v("Xóa ")]
                                       )
                                     ],
                                     1
@@ -560,7 +560,7 @@ var render = function() {
                           "vx-card",
                           [
                             _c("p", { staticClass: "font-semibold mb-3" }, [
-                              _vm._v("Price Details")
+                              _vm._v("Ước tính ")
                             ]),
                             _vm._v(" "),
                             _c(
@@ -568,11 +568,11 @@ var render = function() {
                               { staticClass: "flex justify-between mb-2" },
                               [
                                 _c("span", { staticClass: "text-grey" }, [
-                                  _vm._v(" Total price")
+                                  _vm._v(" Tổng tiền ")
                                 ]),
                                 _vm._v(" "),
                                 _c("span", [
-                                  _vm._v("$" + _vm._s(_vm.totalPrice))
+                                  _vm._v(_vm._s(_vm.totalPrice) + " đ")
                                 ])
                               ]
                             ),
@@ -582,11 +582,11 @@ var render = function() {
                               { staticClass: "flex justify-between mb-2" },
                               [
                                 _c("span", { staticClass: "text-grey" }, [
-                                  _vm._v("Delivery Charges")
+                                  _vm._v("Phí giao hàng ")
                                 ]),
                                 _vm._v(" "),
                                 _c("span", { staticClass: "text-danger" }, [
-                                  _vm._v("$2")
+                                  _vm._v("200000 đ")
                                 ])
                               ]
                             ),
@@ -600,10 +600,10 @@ var render = function() {
                                   "flex justify-between font-semibold mb-3"
                               },
                               [
-                                _c("span", [_vm._v("Total")]),
+                                _c("span", [_vm._v("Tổng ")]),
                                 _vm._v(" "),
                                 _c("span", [
-                                  _vm._v("$" + _vm._s(_vm.totalPrice + 2))
+                                  _vm._v(_vm._s(_vm.totalPrice + 20000) + " đ")
                                 ])
                               ]
                             ),
@@ -618,7 +618,7 @@ var render = function() {
                                   }
                                 }
                               },
-                              [_vm._v("PLACE ORDER")]
+                              [_vm._v("Đặt hàng ")]
                             )
                           ],
                           1
@@ -644,7 +644,7 @@ var render = function() {
                             }
                           }
                         },
-                        [_vm._v("Browse Shop")]
+                        [_vm._v("Sản phẩm ")]
                       )
                     ],
                     1
@@ -657,7 +657,7 @@ var render = function() {
             "tab-content",
             {
               staticClass: "mb-5",
-              attrs: { title: "Address", icon: "feather icon-home" }
+              attrs: { title: "ĐỊA CHỈ ", icon: "feather icon-home" }
             },
             [
               _c("div", { staticClass: "vx-row" }, [
@@ -671,8 +671,7 @@ var render = function() {
                         staticClass: "mb-base",
                         attrs: {
                           title: "Add New Address",
-                          subtitle:
-                            'Be sure to check "Deliver to this address" when you have finished'
+                          subtitle: "Kiểm trả đơn hàng trước khi đặt hàng "
                         }
                       },
                       [
@@ -694,7 +693,10 @@ var render = function() {
                                     }
                                   ],
                                   staticClass: "w-full mt-5",
-                                  attrs: { name: "address", label: "Address" },
+                                  attrs: {
+                                    name: "address",
+                                    label: "Địa chỉ: "
+                                  },
                                   model: {
                                     value: _vm.address.address,
                                     callback: function($$v) {
@@ -721,7 +723,7 @@ var render = function() {
                                     }
                                   ],
                                   staticClass: "w-full mt-5",
-                                  attrs: { name: "city", label: "Town/City:" },
+                                  attrs: { name: "city", label: "Thành phố:" },
                                   model: {
                                     value: _vm.address.city,
                                     callback: function($$v) {
@@ -748,7 +750,10 @@ var render = function() {
                                     }
                                   ],
                                   staticClass: "w-full mt-5",
-                                  attrs: { name: "state", label: "State:" },
+                                  attrs: {
+                                    name: "state",
+                                    label: "Số điện thoại :"
+                                  },
                                   model: {
                                     value: _vm.address.phone,
                                     callback: function($$v) {
@@ -772,7 +777,7 @@ var render = function() {
                                   }
                                 }
                               },
-                              [_vm._v("SAVE AND DELIVER HERE")]
+                              [_vm._v("LƯU ĐỊA CHỈ VÀ XÁC NHẬN ")]
                             )
                           ],
                           1
@@ -789,7 +794,7 @@ var render = function() {
                   _vm._l(_vm.addresses, function(address) {
                     return _c(
                       "vx-card",
-                      { key: address.id, attrs: { title: "address" } },
+                      { key: address.id, attrs: { title: "Địa chỉ " } },
                       [
                         _c("div", [
                           _c("p", [_vm._v(_vm._s(address.address))]),
@@ -813,7 +818,7 @@ var render = function() {
                               }
                             }
                           },
-                          [_vm._v("DELIVER TO THIS ADDRESS")]
+                          [_vm._v("GIAO TỚI ĐỊA CHỈ NÀY ")]
                         )
                       ],
                       1
@@ -829,7 +834,7 @@ var render = function() {
             "tab-content",
             {
               staticClass: "mb-5",
-              attrs: { title: "Payment", icon: "feather icon-credit-card" }
+              attrs: { title: "Thanh toán ", icon: "feather icon-credit-card" }
             },
             [
               _c("div", { staticClass: "vx-row" }, [
@@ -842,11 +847,15 @@ var render = function() {
                       {
                         staticClass: "mb-base",
                         attrs: {
-                          title: "Payment Options",
-                          subtitle: "Be sure to click on correct payment option"
+                          title: "Lựa chọn thanh toán ",
+                          subtitle: "Be "
                         }
                       },
-                      [_c("vs-chip", [_vm._v("ONLY PAY ON CASH AVAILABLE")])],
+                      [
+                        _c("vs-chip", [
+                          _vm._v("Chỉ có thể thanh toán bằng tiền mặt ")
+                        ])
+                      ],
                       1
                     )
                   ],
@@ -859,16 +868,16 @@ var render = function() {
                   [
                     _c(
                       "vx-card",
-                      { attrs: { title: "Price Details" } },
+                      { attrs: { title: "Thông tin hóa đơn " } },
                       [
                         _c(
                           "div",
                           { staticClass: "flex justify-between mb-2" },
                           [
-                            _c("span", [_vm._v("TOTAL PRICE")]),
+                            _c("span", [_vm._v("Tổng số tiền ")]),
                             _vm._v(" "),
                             _c("span", { staticClass: "font-semibold" }, [
-                              _vm._v("$" + _vm._s(_vm.totalPrice))
+                              _vm._v(_vm._s(_vm.totalPrice) + " đ")
                             ])
                           ]
                         ),
@@ -877,10 +886,10 @@ var render = function() {
                           "div",
                           { staticClass: "flex justify-between mb-2" },
                           [
-                            _c("span", [_vm._v("Delivery Charges")]),
+                            _c("span", [_vm._v("Phí giao hàng: ")]),
                             _vm._v(" "),
                             _c("span", { staticClass: "text-success" }, [
-                              _vm._v("$2")
+                              _vm._v("20.000 đ")
                             ])
                           ]
                         ),
@@ -888,10 +897,10 @@ var render = function() {
                         _c("vs-divider"),
                         _vm._v(" "),
                         _c("div", { staticClass: "flex justify-between" }, [
-                          _c("span", [_vm._v("Amount Payable")]),
+                          _c("span", [_vm._v("Tổng số tiền : ")]),
                           _vm._v(" "),
                           _c("span", { staticClass: "font-semibold" }, [
-                            _vm._v("$" + _vm._s(_vm.totalPrice + 2))
+                            _vm._v("$" + _vm._s(_vm.totalPrice + 20000))
                           ])
                         ]),
                         _vm._v(" "),
@@ -899,7 +908,7 @@ var render = function() {
                         _vm._v(" "),
                         _c("vs-button", { on: { click: _vm.createOrder } }, [
                           _vm._v(
-                            "\n                                SUBMIT ORDER\n                            "
+                            "\n                                XÁC NHẬN ĐƠN HÀNG \n                            "
                           )
                         ])
                       ],

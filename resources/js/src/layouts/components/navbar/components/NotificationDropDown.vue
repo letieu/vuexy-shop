@@ -6,8 +6,8 @@
     <vs-dropdown-menu class="notification-dropdown dropdown-custom vx-navbar-dropdown">
 
       <div class="notification-top text-center p-5 bg-primary text-white">
-        <h3 class="text-white">{{ items.length }} Item</h3>
-        <p class="opacity-75">Shopping cart</p>
+        <h3 class="text-white">{{ items.length }} Sản phẩm </h3>
+        <p class="opacity-75">Giỏ hàng </p>
       </div>
 
       <VuePerfectScrollbar ref="mainSidebarPs" class="scroll-area--nofications-dropdown p-0 mb-10" :settings="settings" :key="$vs.rtl">
@@ -40,7 +40,7 @@
         d-theme-border-grey-light
         cursor-pointer"
         @click="$router.push('/checkout')">
-        <span>View All</span>
+        <span>Xem tất cả </span>
       </div>
     </vs-dropdown-menu>
   </vs-dropdown>

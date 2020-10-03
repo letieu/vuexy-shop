@@ -551,7 +551,7 @@ var render = function() {
                                           staticClass:
                                             "text-sm font-semibold ml-2"
                                         },
-                                        [_vm._v("WISH LIST")]
+                                        [_vm._v("YÊU THÍCH")]
                                       )
                                     ],
                                     1
@@ -582,7 +582,7 @@ var render = function() {
                                           staticClass:
                                             "text-sm font-semibold ml-2"
                                         },
-                                        [_vm._v("ADD TO CART")]
+                                        [_vm._v("MUA ")]
                                       )
                                     ],
                                     1
@@ -659,7 +659,9 @@ var render = function() {
         "vs-list",
         { staticStyle: { "padding-right": "10px" } },
         [
-          _c("vs-list-header", { attrs: { title: "Price", color: "danger" } }),
+          _c("vs-list-header", {
+            attrs: { title: "Giá sản phẩm ", color: "danger" }
+          }),
           _vm._v(" "),
           _c("vs-list-item", [
             _c(
@@ -681,7 +683,7 @@ var render = function() {
             )
           ]),
           _vm._v(" "),
-          _c("vs-list-header", { attrs: { title: "Branch" } }),
+          _c("vs-list-header", { attrs: { title: "Thương hiệu " } }),
           _vm._v(" "),
           _c(
             "div",
@@ -743,7 +745,7 @@ var render = function() {
           ),
           _vm._v(" "),
           _c("vs-list-header", {
-            attrs: { title: "Category", color: "success" }
+            attrs: { title: "Loại sản phẩm ", color: "success" }
           }),
           _vm._v(" "),
           _c(
@@ -866,7 +868,7 @@ var render = function() {
               ),
               _vm._v(" "),
               _c("h6", { staticClass: "font-bold" }, [
-                _vm._v("$" + _vm._s(_vm.item.price))
+                _vm._v(_vm._s(_vm.item.price) + " đ")
               ])
             ]),
             _vm._v(" "),

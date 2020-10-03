@@ -2,7 +2,7 @@
     <vs-table  pagination max-items="15" search :data="categories">
 
         <template slot="header">
-            <h3 class="mr-5">Category</h3>
+            <h3 class="mr-5">Loại sản phẩm</h3>
             <vs-button @click="showInput = !showInput" radius color="warning" type="filled" icon-pack="feather" icon="icon-plus"></vs-button>
 
             <vs-prompt
@@ -12,10 +12,10 @@
                 :is-valid="category.name"
                 :active.sync="showInput">
                 <div class="con-exemple-prompt">
-                    Nam of category:
+                    Tên loại sản phẩm: 
                     <vs-input placeholder="Name" v-model="category.name" class="mt-4 mb-2 w-full" />
                     <vs-alert v-show="error" color="danger" vs-icon="new_releases" >
-                        Fields can not be empty please enter the data
+                        Không được để trống 
                     </vs-alert>
                 </div>
             </vs-prompt>
@@ -24,9 +24,9 @@
 
         <template slot="thead">
             <vs-th sort-key="email">ID</vs-th>
-            <vs-th sort-key="username">Name</vs-th>
-            <vs-th sort-key="website">Products</vs-th>
-            <vs-th sort-key="id">Created</vs-th>
+            <vs-th sort-key="username">Thể loại </vs-th>
+            <vs-th sort-key="website">Số sản phẩm</vs-th>
+            <vs-th sort-key="id">Đã tạo</vs-th>
             <vs-th>Actions</vs-th>
         </template>
 
@@ -52,11 +52,11 @@
                 <vs-td :data="data[indextr].id">
                     <vs-chip color="success" @click="edit">
                         <vs-avatar icon-pack="feather" icon="icon-edit" />
-                        <span @click="edit(indextr)">edit</span>
+                        <span @click="edit(indextr)">Sửa</span>
                     </vs-chip>
                     <vs-chip color="danger" @click="edit">
                         <vs-avatar icon-pack="feather" icon="icon-trash" />
-                        <span @click="remove(data[indextr].id)">delete</span>
+                        <span @click="remove(data[indextr].id)">Xóa</span>
                     </vs-chip>
                 </vs-td>
             </vs-tr>

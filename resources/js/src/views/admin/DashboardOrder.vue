@@ -7,8 +7,8 @@
             <template slot="thead">
                 <vs-th>ID</vs-th>
                 <vs-th>Username</vs-th>
-                <vs-th>Created at</vs-th>
-                <vs-th>Total</vs-th>
+                <vs-th>Đã tạo</vs-th>
+                <vs-th>Tổng tiền</vs-th>
             </template>
 
             <template slot-scope="{data}">

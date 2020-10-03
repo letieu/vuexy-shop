@@ -38,7 +38,7 @@
                                         @click="">
                                         <feather-icon icon="HeartIcon" svgClasses="h-4 w-4" />
 
-                                        <span class="text-sm font-semibold ml-2">WISH LIST</span>
+                                        <span class="text-sm font-semibold ml-2">YÊU THÍCH</span>
                                     </div>
 
                                     <!-- SECONDARY BUTTON: MOVE TO CART -->
@@ -47,7 +47,7 @@
                                         @click="addToCard(product)">
                                         <feather-icon icon="ShoppingBagIcon" svgClasses="h-4 w-4" />
 
-                                        <span class="text-sm font-semibold ml-2" >ADD TO CART</span>
+                                        <span class="text-sm font-semibold ml-2" >MUA </span>
                                     </div>
                                 </div>
                             </template>

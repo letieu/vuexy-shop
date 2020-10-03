@@ -15,10 +15,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8d1ff725-d7b5-4b4e-aca4-a9c4bd99c895" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/chunks/2.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/chunks/2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/chunks/5.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/chunks/5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/src/views/admin/DashboardBranch.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/views/admin/DashboardBranch.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -215,7 +212,9 @@
       <workItem from="1601305805259" duration="428000" />
       <workItem from="1601720219513" duration="2793000" />
       <workItem from="1601731736331" duration="294000" />
-      <workItem from="1601737779697" duration="354000" />
+      <workItem from="1601737779697" duration="1802000" />
+      <workItem from="1601744159934" duration="233000" />
+      <workItem from="1601744413683" duration="304000" />
     </task>
     <servers />
   </component>
@@ -271,9 +270,10 @@
       <screen x="33" y="33" width="1887" height="1047" />
     </state>
     <state x="782" y="290" width="390" height="520" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/33.33.1887.1047@33.33.1887.1047" timestamp="1601185069164" />
-    <state x="741" y="161" width="471" height="774" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1601299850384">
-      <screen x="33" y="33" width="1887" height="1047" />
+    <state x="720" y="132" width="471" height="774" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1601744385641">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
+    <state x="720" y="132" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1601744385641" />
     <state x="741" y="161" width="471" height="774" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/33.33.1887.1047@33.33.1887.1047" timestamp="1601299850384" />
     <state x="976" y="1" width="943" height="1079" key="dock-window-1" timestamp="1601062868983">
       <screen x="33" y="33" width="1887" height="1047" />

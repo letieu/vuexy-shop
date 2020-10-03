@@ -223,7 +223,7 @@ var render = function() {
                                 }
                               }
                             },
-                            [_vm._v("edit")]
+                            [_vm._v("Sửa")]
                           )
                         ],
                         1
@@ -249,7 +249,7 @@ var render = function() {
                                 }
                               }
                             },
-                            [_vm._v("delete")]
+                            [_vm._v("Xóa")]
                           )
                         ],
                         1
@@ -270,7 +270,7 @@ var render = function() {
         "template",
         { slot: "header" },
         [
-          _c("h3", { staticClass: "mr-5" }, [_vm._v("Category")]),
+          _c("h3", { staticClass: "mr-5" }, [_vm._v("Loại sản phẩm")]),
           _vm._v(" "),
           _c("vs-button", {
             attrs: {
@@ -308,7 +308,7 @@ var render = function() {
                 { staticClass: "con-exemple-prompt" },
                 [
                   _vm._v(
-                    "\n                Nam of category:\n                "
+                    "\n                Tên loại sản phẩm: \n                "
                   ),
                   _c("vs-input", {
                     staticClass: "mt-4 mb-2 w-full",
@@ -337,7 +337,7 @@ var render = function() {
                     },
                     [
                       _vm._v(
-                        "\n                    Fields can not be empty please enter the data\n                "
+                        "\n                    Không được để trống \n                "
                       )
                     ]
                   )
@@ -356,13 +356,15 @@ var render = function() {
         [
           _c("vs-th", { attrs: { "sort-key": "email" } }, [_vm._v("ID")]),
           _vm._v(" "),
-          _c("vs-th", { attrs: { "sort-key": "username" } }, [_vm._v("Name")]),
-          _vm._v(" "),
-          _c("vs-th", { attrs: { "sort-key": "website" } }, [
-            _vm._v("Products")
+          _c("vs-th", { attrs: { "sort-key": "username" } }, [
+            _vm._v("Thể loại ")
           ]),
           _vm._v(" "),
-          _c("vs-th", { attrs: { "sort-key": "id" } }, [_vm._v("Created")]),
+          _c("vs-th", { attrs: { "sort-key": "website" } }, [
+            _vm._v("Số sản phẩm")
+          ]),
+          _vm._v(" "),
+          _c("vs-th", { attrs: { "sort-key": "id" } }, [_vm._v("Đã tạo")]),
           _vm._v(" "),
           _c("vs-th", [_vm._v("Actions")])
         ],

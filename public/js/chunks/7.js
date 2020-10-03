@@ -192,7 +192,7 @@ var render = function() {
             attrs: {
               "icon-pack": "feather",
               icon: "icon-archive",
-              title: "Products"
+              title: "Sản phẩm"
             }
           })
         ],
@@ -207,7 +207,7 @@ var render = function() {
             attrs: {
               "icon-pack": "feather",
               icon: "icon-bookmark",
-              title: "Categories"
+              title: "Thể loại"
             }
           })
         ],
@@ -222,7 +222,7 @@ var render = function() {
             attrs: {
               "icon-pack": "feather",
               icon: "icon-flag",
-              title: "Branches"
+              title: "Thương hiệu"
             }
           })
         ],
@@ -237,7 +237,7 @@ var render = function() {
             attrs: {
               "icon-pack": "feather",
               icon: "icon-truck",
-              title: "Orders"
+              title: "Đơn hàng"
             }
           })
         ],

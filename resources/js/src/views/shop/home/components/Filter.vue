@@ -2,7 +2,7 @@
     <div class="vx-card mr-5" id="filter" style="max-height: 1000px; overflow-y: scroll;">
         <vs-list style="padding-right: 10px">
 <!--            PRICE FILL  -->
-            <vs-list-header title="Price" color="danger"></vs-list-header>
+            <vs-list-header title="Giá sản phẩm " color="danger"></vs-list-header>
             <vs-list-item>
                 <div>
                     <vs-slider max=100 color="success" v-model="filter.price" /> {{filter.price}}
@@ -10,7 +10,7 @@
             </vs-list-item>
 
 <!--            BRANCH FILL  -->
-            <vs-list-header title="Branch"></vs-list-header>
+            <vs-list-header title="Thương hiệu "></vs-list-header>
             <div>
                 <vs-list-item>
                     <vs-radio v-model="filter.branch" :vs-value="null">All</vs-radio>
@@ -27,7 +27,7 @@
             </div>
 
 <!--            CATEGORY FILL-->
-            <vs-list-header title="Category" color="success"></vs-list-header>
+            <vs-list-header title="Loại sản phẩm " color="success"></vs-list-header>
             <vs-radio v-model="filter.category" :vs-value="null">All</vs-radio>
             <vs-list-item
                 v-for="(category,i) in categories"

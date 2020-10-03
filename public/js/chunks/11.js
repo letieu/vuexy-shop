@@ -268,7 +268,7 @@ var render = function() {
                   staticClass: "text-inherit underline",
                   attrs: { to: { name: "ecommerce-shop" } }
                 },
-                [_vm._v("All Items")]
+                [_vm._v("Tất cảm sản phẩm ")]
               )
             ],
             1
@@ -318,7 +318,9 @@ var render = function() {
                           _c("h3", [_vm._v(_vm._s(_vm.item_data.name))]),
                           _vm._v(" "),
                           _c("p", { staticClass: "my-2" }, [
-                            _c("span", { staticClass: "mr-2" }, [_vm._v("by")]),
+                            _c("span", { staticClass: "mr-2" }, [
+                              _vm._v("Thương hiệu ")
+                            ]),
                             _vm._v(" "),
                             _c("span", [
                               _vm._v(_vm._s(_vm.item_data.branch.name))
@@ -363,7 +365,7 @@ var render = function() {
                                   staticClass:
                                     "cursor-pointer leading-none mt-2"
                                 },
-                                [_vm._v("424 ratings")]
+                                [_vm._v("424 đánh giá ")]
                               )
                             ]
                           ),
@@ -433,7 +435,7 @@ var render = function() {
                           _c("vs-divider"),
                           _vm._v(" "),
                           _c("vs-button", { staticClass: "mt-10" }, [
-                            _vm._v("ADD TO CARD")
+                            _vm._v("THÊM VÀO GIỎ HÀNG")
                           ])
                         ],
                         1
@@ -465,13 +467,11 @@ var render = function() {
                               _c(
                                 "span",
                                 { staticClass: "font-semibold text-lg" },
-                                [_vm._v("100% Original")]
+                                [_vm._v("100% chính hãng ")]
                               ),
                               _vm._v(" "),
                               _c("p", { staticClass: "mt-2" }, [
-                                _vm._v(
-                                  "Chocolate bar candy canes ice cream toffee cookie halvah."
-                                )
+                                _vm._v("Được nhập khẩu trực tiếp từ kho hàng ")
                               ])
                             ],
                             1
@@ -495,12 +495,12 @@ var render = function() {
                               _c(
                                 "span",
                                 { staticClass: "font-semibold text-lg" },
-                                [_vm._v("10 Day Replacement")]
+                                [_vm._v("10 ngày 1 đổi 1")]
                               ),
                               _vm._v(" "),
                               _c("p", { staticClass: "mt-2" }, [
                                 _vm._v(
-                                  "Marshmallow biscuit donut dragée fruitcake wafer."
+                                  "Hệ thống đổi trả, chăm sóc khác hàng chu đáo "
                                 )
                               ])
                             ],
@@ -525,13 +525,11 @@ var render = function() {
                               _c(
                                 "span",
                                 { staticClass: "font-semibold text-lg" },
-                                [_vm._v("1 Year Warranty")]
+                                [_vm._v("20 chi nhánh toàn quốc")]
                               ),
                               _vm._v(" "),
                               _c("p", { staticClass: "mt-2" }, [
-                                _vm._v(
-                                  "Cotton candy gingerbread cake I love sugar sweet."
-                                )
+                                _vm._v("Hệ thống cửa hành rộng lớn toàn quốc  ")
                               ])
                             ],
                             1

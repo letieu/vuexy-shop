@@ -124,25 +124,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -664,7 +645,7 @@ var render = function() {
                           _vm._v(" "),
                           _c("vs-td", [
                             _c("p", { staticClass: "product-price" }, [
-                              _vm._v("$" + _vm._s(tr.price))
+                              _vm._v(_vm._s(tr.price) + " đ")
                             ])
                           ]),
                           _vm._v(" "),
@@ -779,64 +760,7 @@ var render = function() {
                                   }
                                 }),
                                 _vm._v(" "),
-                                _c("span", [_vm._v("Delete")])
-                              ],
-                              1
-                            )
-                          ]),
-                          _vm._v(" "),
-                          _c("vs-dropdown-item", [
-                            _c(
-                              "span",
-                              { staticClass: "flex items-center" },
-                              [
-                                _c("feather-icon", {
-                                  staticClass: "mr-2",
-                                  attrs: {
-                                    icon: "ArchiveIcon",
-                                    svgClasses: "h-4 w-4"
-                                  }
-                                }),
-                                _vm._v(" "),
-                                _c("span", [_vm._v("Archive")])
-                              ],
-                              1
-                            )
-                          ]),
-                          _vm._v(" "),
-                          _c("vs-dropdown-item", [
-                            _c(
-                              "span",
-                              { staticClass: "flex items-center" },
-                              [
-                                _c("feather-icon", {
-                                  staticClass: "mr-2",
-                                  attrs: {
-                                    icon: "FileIcon",
-                                    svgClasses: "h-4 w-4"
-                                  }
-                                }),
-                                _vm._v(" "),
-                                _c("span", [_vm._v("Print")])
-                              ],
-                              1
-                            )
-                          ]),
-                          _vm._v(" "),
-                          _c("vs-dropdown-item", [
-                            _c(
-                              "span",
-                              { staticClass: "flex items-center" },
-                              [
-                                _c("feather-icon", {
-                                  staticClass: "mr-2",
-                                  attrs: {
-                                    icon: "SaveIcon",
-                                    svgClasses: "h-4 w-4"
-                                  }
-                                }),
-                                _vm._v(" "),
-                                _c("span", [_vm._v("Another Action")])
+                                _c("span", [_vm._v("Xóa")])
                               ],
                               1
                             )
@@ -863,7 +787,7 @@ var render = function() {
                       _c(
                         "span",
                         { staticClass: "ml-2 text-base text-primary" },
-                        [_vm._v("Add New")]
+                        [_vm._v("Tạo mới")]
                       )
                     ],
                     1
@@ -981,21 +905,19 @@ var render = function() {
             [
               _c("vs-th", [_vm._v("Image")]),
               _vm._v(" "),
-              _c("vs-th", { attrs: { "sort-key": "name" } }, [_vm._v("Name")]),
+              _c("vs-th", { attrs: { "sort-key": "name" } }, [_vm._v("Tên ")]),
               _vm._v(" "),
               _c("vs-th", { attrs: { "sort-key": "category" } }, [
-                _vm._v("Category")
+                _vm._v("Loại sản phẩm")
               ]),
               _vm._v(" "),
               _c("vs-th", { attrs: { "sort-key": "branch" } }, [
-                _vm._v("Branch")
+                _vm._v("Thương hiệu")
               ]),
               _vm._v(" "),
-              _c("vs-th", { attrs: { "sort-key": "price" } }, [
-                _vm._v("Price")
-              ]),
+              _c("vs-th", { attrs: { "sort-key": "price" } }, [_vm._v("Giá")]),
               _vm._v(" "),
-              _c("vs-th", [_vm._v("Action")])
+              _c("vs-th", [_vm._v("Menu")])
             ],
             1
           )
@@ -1140,7 +1062,7 @@ var render = function() {
                               }
                             }
                           },
-                          [_vm._v("Update Image\n                    ")]
+                          [_vm._v("Thay đổi ảnh \n                    ")]
                         ),
                         _vm._v(" "),
                         _c(
@@ -1153,7 +1075,7 @@ var render = function() {
                               }
                             }
                           },
-                          [_vm._v("Remove Image")]
+                          [_vm._v("Xóa ảnh ")]
                         )
                       ],
                       1
@@ -1163,7 +1085,7 @@ var render = function() {
               _vm._v(" "),
               _c("vs-input", {
                 staticClass: "mt-5 w-full",
-                attrs: { label: "Name", name: "item-name" },
+                attrs: { label: "Tên ", name: "item-name" },
                 model: {
                   value: _vm.dataName,
                   callback: function($$v) {
@@ -1177,7 +1099,7 @@ var render = function() {
                 "vs-select",
                 {
                   staticClass: "mt-5 w-full",
-                  attrs: { label: "Category", name: "item-category" },
+                  attrs: { label: "Loại sản phẩm", name: "item-category" },
                   model: {
                     value: _vm.dataCategory,
                     callback: function($$v) {
@@ -1199,7 +1121,7 @@ var render = function() {
                 "vs-select",
                 {
                   staticClass: "mt-5 w-full",
-                  attrs: { label: "Branch", name: "item-branch" },
+                  attrs: { label: "Thương hiệu ", name: "item-branch" },
                   model: {
                     value: _vm.dataBranch,
                     callback: function($$v) {
@@ -1219,7 +1141,7 @@ var render = function() {
               _vm._v(" "),
               _c("vs-input", {
                 staticClass: "mt-5 w-full",
-                attrs: { label: "Description", name: "item-description" },
+                attrs: { label: "Mô tả ", name: "item-description" },
                 model: {
                   value: _vm.dataDescription,
                   callback: function($$v) {
@@ -1234,7 +1156,7 @@ var render = function() {
                 attrs: {
                   "icon-pack": "feather",
                   icon: "icon-dollar-sign",
-                  label: "Price",
+                  label: "Giá ",
                   name: "item-price"
                 },
                 model: {
@@ -1267,7 +1189,7 @@ var render = function() {
                             }
                           }
                         },
-                        [_vm._v("Upload Image")]
+                        [_vm._v("THÊM ẢNH")]
                       )
                     ],
                     1
@@ -1294,7 +1216,7 @@ var render = function() {
               attrs: { disabled: !_vm.isFormValid },
               on: { click: _vm.submitData }
             },
-            [_vm._v("Submit")]
+            [_vm._v("TẠO ")]
           ),
           _vm._v(" "),
           _c(
@@ -1307,7 +1229,7 @@ var render = function() {
                 }
               }
             },
-            [_vm._v("Cancel")]
+            [_vm._v("HỦY")]
           )
         ],
         1

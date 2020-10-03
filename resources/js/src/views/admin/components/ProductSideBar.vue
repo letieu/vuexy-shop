@@ -22,57 +22,57 @@
                     <!-- Image upload Buttons -->
                     <div class="modify-img flex justify-between mt-5">
                         <input type="file" class="hidden" ref="updateImgInput" @change="updateCurrImg" accept="image/*">
-                        <vs-button class="mr-4" type="flat" @click="$refs.updateImgInput.click()">Update Image
+                        <vs-button class="mr-4" type="flat" @click="$refs.updateImgInput.click()">Thay đổi ảnh 
                         </vs-button>
-                        <vs-button type="flat" color="#999" @click="dataImg = null">Remove Image</vs-button>
+                        <vs-button type="flat" color="#999" @click="dataImg = null">Xóa ảnh </vs-button>
                     </div>
                 </template>
 
                 <!-- NAME -->
-                <vs-input label="Name" v-model="dataName" class="mt-5 w-full" name="item-name"/>
+                <vs-input label="Tên " v-model="dataName" class="mt-5 w-full" name="item-name"/>
                 <!--        <span class="text-danger text-sm" v-show="errors.has('item-name')">{{ errors.first('item-name') }}</span>-->
 
                 <!-- CATEGORY -->
-                <vs-select v-model="dataCategory" label="Category" class="mt-5 w-full" name="item-category">
+                <vs-select v-model="dataCategory" label="Loại sản phẩm" class="mt-5 w-full" name="item-category">
                     <vs-select-item :key="item.id" :value="item.id" :text="item.name"
                                     v-for="item in category_choices" />
                 </vs-select>
                 <!--        <span class="text-danger text-sm" v-show="errors.has('item-category')">{{ errors.first('item-category') }}</span>-->
 
                 <!-- BRANCH -->
-                <vs-select v-model="dataBranch" label="Branch" class="mt-5 w-full" name="item-branch">
+                <vs-select v-model="dataBranch" label="Thương hiệu " class="mt-5 w-full" name="item-branch">
                     <vs-select-item :key="item.id" :value="item.id" :text="item.name"
                                     v-for="item in branch_choices"/>
                 </vs-select>
                 <!-- END BRANCH -->
 
                 <!-- DESCRIPTION -->
-                <vs-input label="Description" v-model="dataDescription" class="mt-5 w-full" name="item-description"/>
+                <vs-input label="Mô tả " v-model="dataDescription" class="mt-5 w-full" name="item-description"/>
                 <!-- END DESCRIPTION -->
 
                 <!-- PRICE -->
                 <vs-input
                     icon-pack="feather"
                     icon="icon-dollar-sign"
-                    label="Price"
+                    label="Giá "
                     v-model="dataPrice"
                     class="mt-5 w-full"
                     name="item-price"/>
-                <!--        <span class="text-danger text-sm" v-show="errors.has('item-price')">{{ errors.first('item-price') }}</span>-->
+                <!--        <span class="text-danger text-sm" v-show="errors.has('item-price')">{{ errors.first('item-price') }} đ</span>-->
 
                 <!-- Upload -->
                 <!-- <vs-upload text="Upload Image" class="img-upload" ref="fileUpload" /> -->
 
                 <div class="upload-img mt-5" v-if="!dataImg">
                     <input type="file" class="hidden" ref="uploadImgInput" @change="updateCurrImg" accept="image/*">
-                    <vs-button @click="$refs.uploadImgInput.click()">Upload Image</vs-button>
+                    <vs-button @click="$refs.uploadImgInput.click()">THÊM ẢNH</vs-button>
                 </div>
             </div>
         </VuePerfectScrollbar>
 
         <div class="flex flex-wrap items-center p-6" slot="footer">
-            <vs-button class="mr-6" @click="submitData" :disabled="!isFormValid">Submit</vs-button>
-            <vs-button type="border" color="danger" @click="isSidebarActiveLocal = false">Cancel</vs-button>
+            <vs-button class="mr-6" @click="submitData" :disabled="!isFormValid">TẠO </vs-button>
+            <vs-button type="border" color="danger" @click="isSidebarActiveLocal = false">HỦY</vs-button>
         </div>
     </vs-sidebar>
 </template>

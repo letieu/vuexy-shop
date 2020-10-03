@@ -4,7 +4,7 @@
         <vs-alert color="danger" title="Error Fetching Product Data" :active.sync="error_occured">
             <span>{{ error_msg }}. </span>
             <span>
-        <span>Check </span><router-link :to="{name:'ecommerce-shop'}" class="text-inherit underline">All Items</router-link>
+        <span>Check </span><router-link :to="{name:'ecommerce-shop'}" class="text-inherit underline">Tất cảm sản phẩm </router-link>
       </span>
         </vs-alert>
 
@@ -37,13 +37,13 @@
                                 <h3>{{ item_data.name }}</h3>
 
                                 <p class="my-2">
-                                    <span class="mr-2">by</span>
+                                    <span class="mr-2">Thương hiệu </span>
                                     <span>{{ item_data.branch.name }}</span>
                                 </p>
                                 <p class="flex items-center flex-wrap">
                                     <span class="text-2xl leading-none font-medium text-primary mr-4 mt-2">${{ item_data.price }}</span>
                                     <span class="pl-4 mr-2 mt-2 border border-solid d-theme-border-grey-light border-t-0 border-b-0 border-r-0"><star-rating :show-rating="false" :rating="item_data.rating" :star-size="20" read-only /></span>
-                                    <span class="cursor-pointer leading-none mt-2">424 ratings</span>
+                                    <span class="cursor-pointer leading-none mt-2">424 đánh giá </span>
                                 </p>
 
                                 <vs-divider />
@@ -64,7 +64,7 @@
 
                                 <vs-divider/>
 
-                                <vs-button class="mt-10">ADD TO CARD</vs-button>
+                                <vs-button class="mt-10">THÊM VÀO GIỎ HÀNG</vs-button>
                             </div>
 
                         </div>
@@ -76,22 +76,22 @@
                             <div class="vx-col md:w-1/3 w-full">
                                 <div class="w-64 mx-auto mb-16 md:mb-0">
                                     <feather-icon icon="AwardIcon" svgClasses="h-12 w-12 text-primary stroke-current" class="block mb-4" />
-                                    <span class="font-semibold text-lg">100% Original</span>
-                                    <p class="mt-2">Chocolate bar candy canes ice cream toffee cookie halvah.</p>
+                                    <span class="font-semibold text-lg">100% chính hãng </span>
+                                    <p class="mt-2">Được nhập khẩu trực tiếp từ kho hàng </p>
                                 </div>
                             </div>
                             <div class="vx-col md:w-1/3 w-full">
                                 <div class="w-64 mx-auto mb-16 md:mb-0">
                                     <feather-icon icon="ClockIcon" svgClasses="h-12 w-12 text-primary stroke-current" class="block mb-4" />
-                                    <span class="font-semibold text-lg">10 Day Replacement</span>
-                                    <p class="mt-2">Marshmallow biscuit donut dragée fruitcake wafer.</p>
+                                    <span class="font-semibold text-lg">10 ngày 1 đổi 1</span>
+                                    <p class="mt-2">Hệ thống đổi trả, chăm sóc khác hàng chu đáo </p>
                                 </div>
                             </div>
                             <div class="vx-col md:w-1/3 w-full">
                                 <div class="w-64 mx-auto">
                                     <feather-icon icon="ShieldIcon" svgClasses="h-12 w-12 text-primary stroke-current" class="block mb-4" />
-                                    <span class="font-semibold text-lg">1 Year Warranty</span>
-                                    <p class="mt-2">Cotton candy gingerbread cake I love sugar sweet.</p>
+                                    <span class="font-semibold text-lg">20 chi nhánh toàn quốc</span>
+                                    <p class="mt-2">Hệ thống cửa hành rộng lớn toàn quốc  </p>
                                 </div>
                             </div>
                         </div>

@@ -12,10 +12,10 @@
                 :is-valid="branch.name"
                 :active.sync="showInput">
                 <div class="con-exemple-prompt">
-                    Nam of branch:
+                    Tên thương hiệu :
                     <vs-input placeholder="Name" v-model="branch.name" class="mt-4 mb-2 w-full" />
                     <vs-alert v-show="error" color="danger" vs-icon="new_releases" >
-                        Fields can not be empty please enter the data
+                        Không được để trống
                     </vs-alert>
                 </div>
             </vs-prompt>
@@ -24,9 +24,9 @@
 
         <template slot="thead">
             <vs-th sort-key="email">ID</vs-th>
-            <vs-th sort-key="username">Name</vs-th>
-            <vs-th sort-key="website">Products</vs-th>
-            <vs-th sort-key="id">Created</vs-th>
+            <vs-th sort-key="username">Tên </vs-th>
+            <vs-th sort-key="website">Số sản phẩm</vs-th>
+            <vs-th sort-key="id">Đã tạo</vs-th>
             <vs-th>Actions</vs-th>
         </template>
 

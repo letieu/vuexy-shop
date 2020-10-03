@@ -8,7 +8,7 @@
             :hide-buttons="true">
 
             <!-- tab 1 content -->
-            <tab-content title="Cart" icon="feather icon-shopping-cart" class="mb-5">
+            <tab-content title="GIỎ HÀNG" icon="feather icon-shopping-cart" class="mb-5">
 
                 <!-- IF CART HAVE ITEMS -->
                 <div class="vx-row" v-if="cartItems.length">
@@ -23,9 +23,9 @@
                                     <h6
                                         class="item-name font-semibold mb-1 cursor-pointer hover:text-primary"
                                         @click="$router.push({name: 'ecommerce-item-detail-view', params: {item_id: item.objectID }}).catch(() => {})">{{ item.name }}</h6>
-                                    <p class="text-success text-sm">In Stock</p>
+                                    <p class="text-success text-sm">Còn hành </p>
 
-                                    <p class="mt-4 font-bold text-sm">Quantity</p>
+                                    <p class="mt-4 font-bold text-sm">Số lượng </p>
                                     <vs-input-number min="1" max="10" :value="getQuantity(item.id)" @input="updateItemQuantity($event, item.id)" class="inline-flex" />
 
                                 </template>
@@ -36,13 +36,13 @@
                                     <!-- PRIMARY BUTTON: REMOVE -->
                                     <div class="item-view-primary-action-btn p-3 rounded-lg flex flex-grow items-center justify-center cursor-pointer mb-3" @click="removeItemFromCart(item)">
                                         <feather-icon icon="XIcon" svgClasses="h-4 w-4" />
-                                        <span class="text-sm font-semibold ml-2">REMOVE</span>
+                                        <span class="text-sm font-semibold ml-2">Xóa </span>
                                     </div>
 
                                     <!-- SECONDARY BUTTON: MOVE-TO/VIEW-IN WISHLIST -->
 <!--                                    <div class="item-view-secondary-action-btn bg-primary p-3 rounded-lg flex flex-grow items-center justify-center text-white cursor-pointer" @click="wishListButtonClicked(item)">-->
 <!--                                        <feather-icon icon="HeartIcon" :svgClasses="[{'text-white fill-current': isInWishList(item.objectID)}, 'h-4 w-4']" />-->
-<!--                                        <span class="text-sm font-semibold ml-2" v-if="isInWishList(item.objectID)">WISHLIST</span>-->
+<!--                                        <span class="text-sm font-semibold ml-2" v-if="isInWishList(item.objectID)">Sản phẩm yêu thích </span>-->
 <!--                                        <span class="text-sm font-semibold ml-2" v-else>WISHLIST</span>-->
 <!--                                    </div>-->
                                 </template>
@@ -53,43 +53,43 @@
                     <!-- RIGHT COL -->
                     <div class="vx-col lg:w-1/3 w-full">
                         <vx-card>
-                            <p class="font-semibold mb-3">Price Details</p>
+                            <p class="font-semibold mb-3">Ước tính </p>
                             <div class="flex justify-between mb-2">
-                                <span class="text-grey"> Total price</span>
-                                <span>${{totalPrice}}</span>
+                                <span class="text-grey"> Tổng tiền </span>
+                                <span>{{totalPrice}} đ</span>
                             </div>
                             <div class="flex justify-between mb-2">
-                                <span class="text-grey">Delivery Charges</span>
-                                <span class="text-danger">$2</span>
+                                <span class="text-grey">Phí giao hàng </span>
+                                <span class="text-danger">200000 đ</span>
                             </div>
 
                             <vs-divider />
 
                             <div class="flex justify-between font-semibold mb-3">
-                                <span>Total</span>
-                                <span>${{totalPrice + 2}}</span>
+                                <span>Tổng </span>
+                                <span>{{totalPrice + 20000}} đ</span>
                             </div>
 
-                            <vs-button class="w-full" @click="$refs.checkoutWizard.nextTab()">PLACE ORDER</vs-button>
+                            <vs-button class="w-full" @click="$refs.checkoutWizard.nextTab()">Đặt hàng </vs-button>
                         </vx-card>
                     </div>
                 </div>
 
                 <!-- IF NO ITEMS IN CART -->
                 <vx-card title="You don't have any items in your cart." v-else>
-                    <vs-button @click="$router.push('/apps/eCommerce/shop').catch(() => {})">Browse Shop</vs-button>
+                    <vs-button @click="$router.push('/apps/eCommerce/shop').catch(() => {})">Sản phẩm </vs-button>
                 </vx-card>
 
             </tab-content>
 
             <!-- tab 2 content -->
-            <tab-content title="Address" icon="feather icon-home" class="mb-5">
+            <tab-content title="ĐỊA CHỈ " icon="feather icon-home" class="mb-5">
 
                 <div class="vx-row">
 
                     <!-- LEFT COL: NEW ADDRESS -->
                     <div class="vx-col lg:w-2/3 w-full">
-                        <vx-card title="Add New Address" subtitle="Be sure to check &quot;Deliver to this address&quot; when you have finished" class="mb-base">
+                        <vx-card title="Add New Address" subtitle="Kiểm trả đơn hàng trước khi đặt hàng " class="mb-base">
 
                             <form data-vv-scope="add-new-address">
                                 <div class="vx-row">
@@ -97,7 +97,7 @@
                                         <vs-input
                                             v-validate="'required'"
                                             name="address"
-                                            label="Address"
+                                            label="Địa chỉ: "
                                             v-model="address.address"
                                             class="w-full mt-5" />
                                 </div>
@@ -106,7 +106,7 @@
                                         <vs-input
                                             v-validate="'required'"
                                             name="city"
-                                            label="Town/City:"
+                                            label="Thành phố:"
                                             v-model="address.city"
                                             class="w-full mt-5" />
 
@@ -117,19 +117,19 @@
                                         <vs-input
                                             v-validate="'required'"
                                             name="state"
-                                            label="State:"
+                                            label="Số điện thoại :"
                                             v-model="address.phone"
                                             class="w-full mt-5" />
 
                                 </div>
-                                <vs-button class="mt-6 ml-auto flex" @click.prevent="submitNewAddressForm">SAVE AND DELIVER HERE</vs-button>
+                                <vs-button class="mt-6 ml-auto flex" @click.prevent="submitNewAddressForm">LƯU ĐỊA CHỈ VÀ XÁC NHẬN </vs-button>
                             </form>
                         </vx-card>
                     </div>
 
                     <!-- RIGHT COL: CONTINUE WITH SAVED ADDRESS -->
                     <div class="vx-col lg:w-1/3 w-full">
-                        <vx-card title="address" v-for="address in addresses" :key="address.id">
+                        <vx-card title="Địa chỉ " v-for="address in addresses" :key="address.id">
                             <div>
                                 <p>{{address.address}}</p>
                                 <p>{{address.city}}</p>
@@ -138,7 +138,7 @@
 
                             <vs-divider />
 
-                            <vs-button class="w-full" @click="choseAddress(address.id)">DELIVER TO THIS ADDRESS</vs-button>
+                            <vs-button class="w-full" @click="choseAddress(address.id)">GIAO TỚI ĐỊA CHỈ NÀY </vs-button>
                         </vx-card>
                     </div>
 
@@ -146,41 +146,41 @@
             </tab-content>
 
             <!-- tab 3 content -->
-            <tab-content title="Payment" icon="feather icon-credit-card" class="mb-5">
+            <tab-content title="Thanh toán " icon="feather icon-credit-card" class="mb-5">
 
                 <div class="vx-row">
 
                     <!-- LEFT COL: PAYMENT OPTIONS -->
                     <div class="vx-col lg:w-2/3 w-full">
-                        <vx-card title="Payment Options" subtitle="Be sure to click on correct payment option" class="mb-base">
-                            <vs-chip>ONLY PAY ON CASH AVAILABLE</vs-chip>
+                        <vx-card title="Lựa chọn thanh toán " subtitle="Be " class="mb-base">
+                            <vs-chip>Chỉ có thể thanh toán bằng tiền mặt </vs-chip>
                         </vx-card>
                     </div>
 
                     <!-- RIGHT COL: PRICE -->
                     <div class="vx-col lg:w-1/3 w-full">
-                        <vx-card title="Price Details">
+                        <vx-card title="Thông tin hóa đơn ">
 
                             <div class="flex justify-between mb-2">
-                                <span>TOTAL PRICE</span>
-                                <span class="font-semibold">${{totalPrice}}</span>
+                                <span>Tổng số tiền </span>
+                                <span class="font-semibold">{{totalPrice}} đ</span>
                             </div>
                             <div class="flex justify-between mb-2">
-                                <span>Delivery Charges</span>
-                                <span class="text-success">$2</span>
+                                <span>Phí giao hàng: </span>
+                                <span class="text-success">20.000 đ</span>
                             </div>
 
                             <vs-divider />
 
                             <div class="flex justify-between">
-                                <span>Amount Payable</span>
-                                <span class="font-semibold">${{totalPrice + 2}}</span>
+                                <span>Tổng số tiền : </span>
+                                <span class="font-semibold">${{totalPrice + 20000}}</span>
                             </div>
 
                             <vs-divider></vs-divider>
 
                             <vs-button @click="createOrder">
-                                SUBMIT ORDER
+                                XÁC NHẬN ĐƠN HÀNG 
                             </vs-button>
                         </vx-card>
                     </div>

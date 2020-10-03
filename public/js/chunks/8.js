@@ -116,15 +116,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -294,7 +285,7 @@ var render = function() {
                             _vm._v(" "),
                             _c("p", [
                               _vm._v(
-                                "Welcome back, please login to your account."
+                                "Chào mừng bạn quay lại, Hãy đăng nhập để mua hàng "
                               )
                             ])
                           ]),
@@ -493,7 +484,7 @@ var render = function() {
                                         staticClass: "float-right",
                                         on: { click: _vm.submit }
                                       },
-                                      [_vm._v("Login")]
+                                      [_vm._v("Đăng nhập ")]
                                     )
                                   ]
                                 : [
@@ -518,7 +509,7 @@ var render = function() {
                                         staticClass: "float-right",
                                         on: { click: _vm.registerSubmit }
                                       },
-                                      [_vm._v("Register")]
+                                      [_vm._v("Đăng ký")]
                                     )
                                   ]
                             ],

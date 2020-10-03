@@ -318,9 +318,9 @@ var render = function() {
               _vm._v(" "),
               _c("vs-th", [_vm._v("Username")]),
               _vm._v(" "),
-              _c("vs-th", [_vm._v("Created at")]),
+              _c("vs-th", [_vm._v("Đã tạo")]),
               _vm._v(" "),
-              _c("vs-th", [_vm._v("Total")])
+              _c("vs-th", [_vm._v("Tổng tiền")])
             ],
             1
           )

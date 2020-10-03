@@ -2,8 +2,8 @@
     <div class="related-products text-center px-6">
 
         <div class="related-headings mb-8 text-center">
-            <h2 class="uppercase">Related Products</h2>
-            <p>People also search for this items</p>
+            <h2 class="uppercase">Sản phẩm liên quan</h2>
+            <p>Mọi người cũng tìm kiếm</p>
         </div>
         <swiper :options="swiperOption" :dir="$vs.rtl ? 'rtl' : 'ltr'" :key="$vs.rtl"
                 class="related-product-swiper px-12 py-6">
@@ -13,7 +13,7 @@
                 <div class="item-heading mb-4">
                     <p class="text-lg font-semibold truncate">{{ item.name }}</p>
                     <p class="text-sm">
-                        <span class="mr-2">by</span>
+                        <span class="mr-2">Thương hiệu </span>
                         <span>{{ item.brand }}</span>
                     </p>
                 </div>

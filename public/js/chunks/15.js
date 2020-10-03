@@ -40,15 +40,11 @@ var render = function() {
         _c(
           "p",
           { staticClass: "sm:mx-0 mx-4 mb-4 sm:mb-16 d-theme-text-inverse" },
-          [
-            _vm._v(
-              "paraphonic unassessable foramination Caulopteris worral Spirophyton encrimson esparcet aggerate chondrule restate whistler shallopy biosystematy area bertram plotting unstarting quarterstaff."
-            )
-          ]
+          [_vm._v("Có lỗi xảy ra :( ")]
         ),
         _vm._v(" "),
         _c("vs-button", { attrs: { size: "large", to: "/" } }, [
-          _vm._v("Back to Home")
+          _vm._v("Về trang chủ")
         ])
       ],
       1

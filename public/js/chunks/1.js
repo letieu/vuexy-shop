@@ -238,7 +238,9 @@ var render = function() {
                   ]),
                   _vm._v(" "),
                   _c("p", { staticClass: "text-sm" }, [
-                    _c("span", { staticClass: "mr-2" }, [_vm._v("by")]),
+                    _c("span", { staticClass: "mr-2" }, [
+                      _vm._v("Thương hiệu ")
+                    ]),
                     _vm._v(" "),
                     _c("span", [_vm._v(_vm._s(item.brand))])
                   ])
@@ -305,9 +307,9 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "related-headings mb-8 text-center" }, [
-      _c("h2", { staticClass: "uppercase" }, [_vm._v("Related Products")]),
+      _c("h2", { staticClass: "uppercase" }, [_vm._v("Sản phẩm liên quan")]),
       _vm._v(" "),
-      _c("p", [_vm._v("People also search for this items")])
+      _c("p", [_vm._v("Mọi người cũng tìm kiếm")])
     ])
   }
 ]

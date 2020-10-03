@@ -4330,10 +4330,10 @@ var render = function() {
             },
             [
               _c("h3", { staticClass: "text-white" }, [
-                _vm._v(_vm._s(_vm.items.length) + " Item")
+                _vm._v(_vm._s(_vm.items.length) + " Sản phẩm ")
               ]),
               _vm._v(" "),
-              _c("p", { staticClass: "opacity-75" }, [_vm._v("Shopping cart")])
+              _c("p", { staticClass: "opacity-75" }, [_vm._v("Giỏ hàng ")])
             ]
           ),
           _vm._v(" "),
@@ -4396,7 +4396,7 @@ var render = function() {
                 }
               }
             },
-            [_c("span", [_vm._v("View All")])]
+            [_c("span", [_vm._v("Xem tất cả ")])]
           )
         ],
         1
