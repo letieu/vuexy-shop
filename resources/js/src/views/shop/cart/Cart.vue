@@ -301,16 +301,16 @@ export default {
         openAlert() {
             this.$vs.dialog({
                 color: 'success',
-                title: `Created order ^__^ `,
-                text: 'You can play around and we will bring this for you, Happy !',
+                title: `Đã tạo đơn hàng ^__^ `,
+                text: 'Bạn đã đặt hàng thành công  !',
                 accept: this.acceptAlert
             })
         },
         acceptAlert() {
             this.$vs.notify({
                 color: 'success',
-                title: 'Thank you ^_^ ',
-                text: 'Your order is processing .... '
+                title: 'Cảm ơn bạn đã đặt hàng  ^_^ ',
+                text: 'Đơn hàng đang được xử lý  .... '
             })
             this.$router.push('/')
         }

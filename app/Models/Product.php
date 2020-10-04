@@ -18,6 +18,11 @@ class Product extends Model
         return $this->belongsTo('App\Models\Branch', 'branch_id');
     }
 
+    public function comments()
+    {
+        return $this->hasMany('App\Models\Comment', 'product_id');
+    }
+
     public function scopeName($query, $request)
     {
         if ($request->has('name')) {

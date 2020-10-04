@@ -119,6 +119,87 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -130,7 +211,9 @@ __webpack_require__.r(__webpack_exports__);
     return {
       item_data: null,
       error_occured: false,
-      error_msg: "" // Related Products Swiper
+      error_msg: "",
+      id: null,
+      commentInput: {} // Related Products Swiper
 
     };
   },
@@ -142,8 +225,11 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       return function (itemId) {
-        return _this.$store.getters['cart/isInCart'](itemId);
+        return _this.$store.getters["cart/isInCart"](itemId);
       };
+    },
+    comments: function comments() {
+      return this.$store.state.product.comments;
     }
   },
   methods: {
@@ -156,18 +242,28 @@ __webpack_require__.r(__webpack_exports__);
     fetch_item_details: function fetch_item_details(id) {
       var _this2 = this;
 
-      this.$store.dispatch('product/detail', id).catch(function (err) {
+      this.$store.dispatch("product/detail", id).catch(function (err) {
         _this2.error_occured = true;
         _this2.error_msg = err.message;
         console.error(err);
       }).then(function (res) {
         _this2.item_data = res.data.data;
       });
+    },
+    fetchComments: function fetchComments() {
+      return this.$store.dispatch('product/fetchComments', this.id);
+    },
+    createComment: function createComment() {
+      this.$store.dispatch('product/createComment', {
+        comment: this.commentInput,
+        id: this.id
+      });
     }
   },
   created: function created() {
-    console.log(this.$route.params.item_id);
-    this.fetch_item_details(this.$route.params.item_id);
+    this.id = this.$route.params.item_id;
+    this.fetch_item_details(this.id);
+    this.fetchComments();
   }
 });
 
@@ -268,7 +364,7 @@ var render = function() {
                   staticClass: "text-inherit underline",
                   attrs: { to: { name: "ecommerce-shop" } }
                 },
-                [_vm._v("Tất cảm sản phẩm ")]
+                [_vm._v("Tất cảm sản phẩm\n      ")]
               )
             ],
             1
@@ -365,7 +461,7 @@ var render = function() {
                                   staticClass:
                                     "cursor-pointer leading-none mt-2"
                                 },
-                                [_vm._v("424 đánh giá ")]
+                                [_vm._v("424 đánh giá\n                ")]
                               )
                             ]
                           ),
@@ -471,7 +567,7 @@ var render = function() {
                               ),
                               _vm._v(" "),
                               _c("p", { staticClass: "mt-2" }, [
-                                _vm._v("Được nhập khẩu trực tiếp từ kho hàng ")
+                                _vm._v("Được nhập khẩu trực tiếp từ kho hàng")
                               ])
                             ],
                             1
@@ -500,7 +596,7 @@ var render = function() {
                               _vm._v(" "),
                               _c("p", { staticClass: "mt-2" }, [
                                 _vm._v(
-                                  "Hệ thống đổi trả, chăm sóc khác hàng chu đáo "
+                                  "\n                  Hệ thống đổi trả, chăm sóc khác hàng chu đáo\n                "
                                 )
                               ])
                             ],
@@ -529,7 +625,7 @@ var render = function() {
                               ),
                               _vm._v(" "),
                               _c("p", { staticClass: "mt-2" }, [
-                                _vm._v("Hệ thống cửa hành rộng lớn toàn quốc  ")
+                                _vm._v("Hệ thống cửa hành rộng lớn toàn quốc")
                               ])
                             ],
                             1
@@ -544,6 +640,68 @@ var render = function() {
             2
           )
         : _vm._e(),
+      _vm._v(" "),
+      _c(
+        "vx-card",
+        { staticClass: "mt-8 mb-8", attrs: { title: "Đánh giá sản phẩm " } },
+        [
+          _c(
+            "div",
+            [
+              _c("vs-textarea", {
+                model: {
+                  value: _vm.commentInput.text,
+                  callback: function($$v) {
+                    _vm.$set(_vm.commentInput, "text", $$v)
+                  },
+                  expression: "commentInput.text"
+                }
+              }),
+              _vm._v(" "),
+              _c(
+                "vs-button",
+                {
+                  on: {
+                    click: function($event) {
+                      return _vm.createComment()
+                    }
+                  }
+                },
+                [_vm._v("Đánh giá ")]
+              ),
+              _vm._v(" "),
+              _c(
+                "vs-list",
+                { staticClass: "mt-8" },
+                [
+                  _c("vs-list-header", {
+                    attrs: { title: "Bình luận", color: "danger" }
+                  }),
+                  _vm._v(" "),
+                  _vm._l(_vm.comments, function(comment, i) {
+                    return _c(
+                      "vs-list-item",
+                      {
+                        key: i,
+                        attrs: {
+                          title: comment.user.name,
+                          subtitle: comment.text
+                        }
+                      },
+                      [
+                        _c("template", { slot: "avatar" }, [_c("vs-avatar")], 1)
+                      ],
+                      2
+                    )
+                  })
+                ],
+                2
+              )
+            ],
+            1
+          )
+        ]
+      ),
       _vm._v(" "),
       _c("ProductSlider")
     ],

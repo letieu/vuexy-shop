@@ -3,7 +3,8 @@ import Vue from "vue";
 
 let state = () => ({
     all: [],
-    filter: {}
+    filter: {},
+    comments: []
 })
 
 const mutations = {
@@ -26,6 +27,13 @@ const mutations = {
     },
     SET_FILTERS(state, filter) {
         state.filter = filter
+    },
+    ADD_COMMENT(state, comment) {
+        state.comments.push(comment)
+    },
+    SET_COMMENTS(state, comments)
+    {
+        state.comments = comments
     }
 }
 
@@ -66,6 +74,18 @@ const actions = {
         let res = await product.delete(id)
         commit('DELETE_PRODUCT', id)
 
+        return res
+    },
+
+    async fetchComments({commit}, id) {
+        let res = await product.getComments(id)
+        commit('SET_COMMENTS', res.data.data)
+        return res
+    },
+
+    async createComment({commit}, {comment, id}) {
+        let res = await product.createComment(comment, id)
+        commit('ADD_COMMENT', res.data.data)
         return res
     }
 }

@@ -76,4 +76,17 @@ class ProductController extends Controller
 
         return $this->success($products);
     }
+
+    public function comments($id)
+    {
+        $comments = $this->productService->listComments($id);
+        return $this->success($comments);
+    }
+
+    public function createComment(Request $request, $id)
+    {
+        $comment = $this->productService->createComment($request, $id);
+
+        return $this->success($comment);
+    }
 }

@@ -1,5 +1,5 @@
 <template>
-    <div class="vx-card mr-5" id="filter" style="max-height: 1000px; overflow-y: scroll;">
+    <div class="vx-card mr-5" id="filter">
         <vs-list style="padding-right: 10px">
 <!--            PRICE FILL  -->
             <vs-list-header title="Giá sản phẩm " color="danger"></vs-list-header>

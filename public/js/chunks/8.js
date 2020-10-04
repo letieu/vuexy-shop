@@ -301,7 +301,7 @@ var render = function() {
                                       "icon-no-border": "",
                                       icon: "icon icon-user",
                                       "icon-pack": "feather",
-                                      "label-placeholder": "User name"
+                                      "label-placeholder": "Tài khoản"
                                     },
                                     model: {
                                       value: _vm.name,
@@ -377,7 +377,7 @@ var render = function() {
                                   "icon-no-border": "",
                                   icon: "icon icon-lock",
                                   "icon-pack": "feather",
-                                  "label-placeholder": "Password"
+                                  "label-placeholder": "Mật khẩu"
                                 },
                                 model: {
                                   value: _vm.password,
@@ -416,7 +416,7 @@ var render = function() {
                                       "icon-no-border": "",
                                       icon: "icon icon-lock",
                                       "icon-pack": "feather",
-                                      "label-placeholder": "Password"
+                                      "label-placeholder": "Mật khẩu"
                                     },
                                     model: {
                                       value: _vm.password_confirmation,
@@ -451,15 +451,9 @@ var render = function() {
                                           },
                                           [
                                             _vm._v(
-                                              "Remember Me\n                                       "
+                                              "Ghi nhớ \n                                       "
                                             )
                                           ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "router-link",
-                                          { attrs: { to: "" } },
-                                          [_vm._v("Forgot Password?")]
                                         )
                                       ],
                                       1
@@ -475,7 +469,7 @@ var render = function() {
                                           }
                                         }
                                       },
-                                      [_vm._v("Register")]
+                                      [_vm._v("Đăng ký")]
                                     ),
                                     _vm._v(" "),
                                     _c(
@@ -500,7 +494,7 @@ var render = function() {
                                           }
                                         }
                                       },
-                                      [_vm._v("Login")]
+                                      [_vm._v("Quay lại")]
                                     ),
                                     _vm._v(" "),
                                     _c(

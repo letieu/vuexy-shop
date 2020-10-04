@@ -3,10 +3,13 @@
 namespace App\Services;
 
 use App\Helpers\ImageHelper;
+use App\Http\Controllers\Auth\ResetPasswordController;
 use App\Repositories\Eloquent\BranchRepository;
 use App\Repositories\Eloquent\CategoryRepository;
+use App\Repositories\Eloquent\CommentRepository;
 use App\Repositories\Eloquent\ProductRepository;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ProductService
 {
@@ -15,15 +18,18 @@ class ProductService
     protected $productRepo;
     protected $categoryRepo;
     protected $branchRepo;
+    protected $commentRepo;
 
     public function __construct(
         ProductRepository $productRepo,
         CategoryRepository $categoryRepo,
-        BranchRepository $branchRepo
+        BranchRepository $branchRepo,
+        CommentRepository $commentRepo
     ){
         $this->productRepo = $productRepo;
         $this->categoryRepo = $categoryRepo;
         $this->branchRepo = $branchRepo;
+        $this->commentRepo = $commentRepo;
     }
 
     public function search(Request $request)
@@ -61,5 +67,23 @@ class ProductService
     public function findByIds(Request $request)
     {
         return $this->productRepo->findByIds($request->get('ids'));
+    }
+
+    public function createComment(Request $request, $id)
+    {
+        $comment = $this->commentRepo->create([
+           'product_id' => $id,
+            'user_id' => Auth::id(),
+            'text' => data_get($request, 'text', '')
+        ]);
+
+        $comment['user'] = Auth::user();
+
+        return $comment;
+    }
+
+    public function listComments($id)
+    {
+        return $this->commentRepo->listComments($id);
     }
 }

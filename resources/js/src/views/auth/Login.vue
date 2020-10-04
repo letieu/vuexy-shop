@@ -26,7 +26,7 @@
                                         icon-no-border
                                         icon="icon icon-user"
                                         icon-pack="feather"
-                                        label-placeholder="User name"
+                                        label-placeholder="Tài khoản"
                                         v-model="name"
                                         class="w-full"/>
 
@@ -53,7 +53,7 @@
                                         icon-no-border
                                         icon="icon icon-lock"
                                         icon-pack="feather"
-                                        label-placeholder="Password"
+                                        label-placeholder="Mật khẩu"
                                         v-model="password"
                                         class="w-full mt-6"/>
 
@@ -68,22 +68,22 @@
                                         icon-no-border
                                         icon="icon icon-lock"
                                         icon-pack="feather"
-                                        label-placeholder="Password"
+                                        label-placeholder="Mật khẩu"
                                         v-model="password_confirmation"
                                         class="w-full mt-6"/>
 
                                    <template v-if="!registering">
                                        <div class="flex flex-wrap justify-between my-5">
-                                           <vs-checkbox v-model="checkbox_remember_me" class="mb-3">Remember Me
+                                           <vs-checkbox v-model="checkbox_remember_me" class="mb-3">Ghi nhớ 
                                            </vs-checkbox>
-                                           <router-link to="">Forgot Password?</router-link>
+                                        
                                        </div>
-                                       <vs-button type="border" @click="registering = true">Register</vs-button>
+                                       <vs-button type="border" @click="registering = true">Đăng ký</vs-button>
                                        <vs-button class="float-right" @click="submit">Đăng nhập </vs-button>
                                    </template>
                                     <template v-else>
                                         <vs-divider></vs-divider>
-                                        <vs-button type="border" @click="registering = false">Login</vs-button>
+                                        <vs-button type="border" @click="registering = false">Quay lại</vs-button>
                                         <vs-button class="float-right" @click="registerSubmit">Đăng ký</vs-button>
                                     </template>
 

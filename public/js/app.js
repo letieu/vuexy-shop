@@ -69055,6 +69055,58 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     }
 
     return getItems;
+  }(),
+  createComment: function () {
+    var _createComment = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee7(params, id) {
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee7$(_context7) {
+        while (1) {
+          switch (_context7.prev = _context7.next) {
+            case 0:
+              _context7.next = 2;
+              return _axios__WEBPACK_IMPORTED_MODULE_1__["default"].post("api/products/".concat(id, "/comments"), params);
+
+            case 2:
+              return _context7.abrupt("return", _context7.sent);
+
+            case 3:
+            case "end":
+              return _context7.stop();
+          }
+        }
+      }, _callee7);
+    }));
+
+    function createComment(_x7, _x8) {
+      return _createComment.apply(this, arguments);
+    }
+
+    return createComment;
+  }(),
+  getComments: function () {
+    var _getComments = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee8(id) {
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee8$(_context8) {
+        while (1) {
+          switch (_context8.prev = _context8.next) {
+            case 0:
+              _context8.next = 2;
+              return _axios__WEBPACK_IMPORTED_MODULE_1__["default"].get("api/products/".concat(id, "/comments"));
+
+            case 2:
+              return _context8.abrupt("return", _context8.sent);
+
+            case 3:
+            case "end":
+              return _context8.stop();
+          }
+        }
+      }, _callee8);
+    }));
+
+    function getComments(_x9) {
+      return _getComments.apply(this, arguments);
+    }
+
+    return getComments;
   }()
 });
 
@@ -70123,7 +70175,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 var state = function state() {
   return {
     all: [],
-    filter: {}
+    filter: {},
+    comments: []
   };
 };
 
@@ -70150,6 +70203,12 @@ var mutations = {
   },
   SET_FILTERS: function SET_FILTERS(state, filter) {
     state.filter = filter;
+  },
+  ADD_COMMENT: function ADD_COMMENT(state, comment) {
+    state.comments.push(comment);
+  },
+  SET_COMMENTS: function SET_COMMENTS(state, comments) {
+    state.comments = comments;
   }
 };
 var getters = {
@@ -70296,6 +70355,67 @@ var actions = {
     }
 
     return _delete;
+  }(),
+  fetchComments: function () {
+    var _fetchComments = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee5(_ref5, id) {
+      var commit, res;
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee5$(_context5) {
+        while (1) {
+          switch (_context5.prev = _context5.next) {
+            case 0:
+              commit = _ref5.commit;
+              _context5.next = 3;
+              return _services_product__WEBPACK_IMPORTED_MODULE_1__["default"].getComments(id);
+
+            case 3:
+              res = _context5.sent;
+              commit('SET_COMMENTS', res.data.data);
+              return _context5.abrupt("return", res);
+
+            case 6:
+            case "end":
+              return _context5.stop();
+          }
+        }
+      }, _callee5);
+    }));
+
+    function fetchComments(_x9, _x10) {
+      return _fetchComments.apply(this, arguments);
+    }
+
+    return fetchComments;
+  }(),
+  createComment: function () {
+    var _createComment = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee6(_ref6, _ref7) {
+      var commit, comment, id, res;
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee6$(_context6) {
+        while (1) {
+          switch (_context6.prev = _context6.next) {
+            case 0:
+              commit = _ref6.commit;
+              comment = _ref7.comment, id = _ref7.id;
+              _context6.next = 4;
+              return _services_product__WEBPACK_IMPORTED_MODULE_1__["default"].createComment(comment, id);
+
+            case 4:
+              res = _context6.sent;
+              commit('ADD_COMMENT', res.data.data);
+              return _context6.abrupt("return", res);
+
+            case 7:
+            case "end":
+              return _context6.stop();
+          }
+        }
+      }, _callee6);
+    }));
+
+    function createComment(_x11, _x12) {
+      return _createComment.apply(this, arguments);
+    }
+
+    return createComment;
   }()
 };
 /* harmony default export */ __webpack_exports__["default"] = ({

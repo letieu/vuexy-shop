@@ -35,5 +35,15 @@ export default {
                 ids
             }
         })
+    },
+
+    async createComment(params, id)
+    {
+        return await axios.post(`api/products/${id}/comments`, params)
+    },
+
+    async getComments(id)
+    {
+        return await axios.get(`api/products/${id}/comments`)
     }
 }

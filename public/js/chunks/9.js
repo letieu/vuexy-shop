@@ -322,16 +322,16 @@ var ItemListView = function ItemListView() {
     openAlert: function openAlert() {
       this.$vs.dialog({
         color: 'success',
-        title: "Created order ^__^ ",
-        text: 'You can play around and we will bring this for you, Happy !',
+        title: "\u0110\xE3 t\u1EA1o \u0111\u01A1n h\xE0ng ^__^ ",
+        text: 'Bạn đã đặt hàng thành công  !',
         accept: this.acceptAlert
       });
     },
     acceptAlert: function acceptAlert() {
       this.$vs.notify({
         color: 'success',
-        title: 'Thank you ^_^ ',
-        text: 'Your order is processing .... '
+        title: 'Cảm ơn bạn đã đặt hàng  ^_^ ',
+        text: 'Đơn hàng đang được xử lý  .... '
       });
       this.$router.push('/');
     }
