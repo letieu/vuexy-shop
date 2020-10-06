@@ -13,36 +13,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d1ff725-d7b5-4b4e-aca4-a9c4bd99c895" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/assets/images/logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Helpers/ImageHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helpers/ImageHelper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Eloquent/ProductRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Eloquent/ProductRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/ProductService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/ProductService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_27_050658_create_orders_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_27_050658_create_orders_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/banner-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/banner-1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/banner-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/banner-2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/banner/banner-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/banner/banner-1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/chunks/1.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/chunks/1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/chunks/11.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/chunks/11.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/chunks/3.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/chunks/3.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/chunks/4.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/chunks/4.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/chunks/7.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/chunks/7.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/images/banner/banner-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/images/banner/banner-1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/src/layouts/components/navbar/TheNavbarHorizontal.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/layouts/components/navbar/TheNavbarHorizontal.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/src/services/product.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/services/product.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/src/store/modules/product.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/store/modules/product.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/src/views/admin/components/SideBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/views/admin/components/SideBar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/src/views/shop/CategorySlider.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/views/shop/CategorySlider.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/src/views/shop/ProductSlider.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/views/shop/ProductSlider.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/src/views/shop/home/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/views/shop/home/Home.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/src/views/shop/home/components/Banner.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/views/shop/home/components/Banner.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/src/views/shop/product/Product.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/views/shop/product/Product.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-    </list>
+    <list default="true" id="8d1ff725-d7b5-4b4e-aca4-a9c4bd99c895" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -172,7 +143,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/work/g8-payment" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -245,6 +216,7 @@
       <workItem from="1601817906356" duration="4766000" />
       <workItem from="1601823706738" duration="6951000" />
       <workItem from="1601864119297" duration="223000" />
+      <workItem from="1601998944738" duration="363000" />
     </task>
     <servers />
   </component>
@@ -264,9 +236,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="571" y="196" width="800" height="691" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600710955734">
-      <screen x="33" y="33" width="1887" height="1047" />
+    <state x="547" y="168" width="800" height="691" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601999306227">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
+    <state x="547" y="168" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1601999306227" />
     <state x="571" y="196" width="800" height="691" key="#com.intellij.execution.impl.EditConfigurationsDialog/33.33.1887.1047@33.33.1887.1047" timestamp="1600710955734" />
     <state x="647" y="322" width="648" height="439" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600857341490">
       <screen x="33" y="33" width="1887" height="1047" />

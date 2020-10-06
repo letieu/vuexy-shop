@@ -14,3 +14,4 @@ yarn-error.log
 /package-lock.json
 /public/js/chunks/*.js
 /public/js/*.js
+/idea/*

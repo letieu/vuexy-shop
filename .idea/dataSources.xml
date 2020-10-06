@@ -7,5 +7,11 @@
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://localhost:3306/shop</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="vuexy-shop" uuid="2e4bb827-954e-4f63-a9c3-1444115ba31f">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/vuexy-shop</jdbc-url>
+    </data-source>
   </component>
 </project>
