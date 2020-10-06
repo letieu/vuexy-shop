@@ -258,6 +258,9 @@ __webpack_require__.r(__webpack_exports__);
         comment: this.commentInput,
         id: this.id
       });
+    },
+    addToCart: function addToCart() {
+      this.$store.dispatch('cart/addToCart', this.item_data);
     }
   },
   created: function created() {
@@ -530,9 +533,14 @@ var render = function() {
                           _vm._v(" "),
                           _c("vs-divider"),
                           _vm._v(" "),
-                          _c("vs-button", { staticClass: "mt-10" }, [
-                            _vm._v("THÊM VÀO GIỎ HÀNG")
-                          ])
+                          _c(
+                            "vs-button",
+                            {
+                              staticClass: "mt-10",
+                              on: { click: _vm.addToCart }
+                            },
+                            [_vm._v("THÊM VÀO GIỎ HÀNG")]
+                          )
                         ],
                         1
                       )

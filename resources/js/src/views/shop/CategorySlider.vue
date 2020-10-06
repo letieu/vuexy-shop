@@ -1,32 +1,27 @@
 <template>
     <div class="carousel-example mt-10 mb-10">
         <!-- swiper -->
-        <swiper :options="swiperOption" :dir="$vs.rtl ? 'rtl' : 'ltr'" :key="$vs.rtl">
+        <swiper  :options="swiperOption" :dir="$vs.rtl ? 'rtl' : 'ltr'" :key="$vs.rtl">
             <swiper-slide>
-              <img class="responsive" src="@assets/images/banner/category-1.jpg" alt="banner">
+              <img class="responsive" src="@assets/images/branch/apple.png" alt="banner">
             </swiper-slide>
             <swiper-slide>
-              <img class="responsive" src="@assets/images/banner/category-1.jpg" alt="banner">
+              <img class="responsive" src="@assets/images/branch/sony.jpeg" alt="banner">
             </swiper-slide>
             <swiper-slide>
-              <img class="responsive" src="@assets/images/banner/category-1.jpg" alt="banner">
+              <img class="responsive" src="@assets/images/branch/vin.png" alt="banner">
             </swiper-slide>
             <swiper-slide>
-              <img class="responsive" src="@assets/images/banner/category-1.jpg" alt="banner">
+              <img class="responsive" src="@assets/images/branch/samsung.svg" alt="banner">
             </swiper-slide>
             <swiper-slide>
-              <img class="responsive" src="@assets/images/banner/category-1.jpg" alt="banner">
+              <img class="responsive" src="@assets/images/branch/vin.png" alt="banner">
             </swiper-slide>
             <swiper-slide>
-              <img class="responsive" src="@assets/images/banner/category-1.jpg" alt="banner">
+              <img class="responsive" src="@assets/images/branch/apple.png" alt="banner">
             </swiper-slide>
-            <swiper-slide>
-              <img class="responsive" src="@assets/images/banner/category-1.jpg" alt="banner">
-            </swiper-slide>
-            <swiper-slide>
-              <img class="responsive" src="@assets/images/banner/category-1.jpg" alt="banner">
-            </swiper-slide>
-            
+
+
             <div class="swiper-pagination" slot="pagination"></div>
         </swiper>
     </div>
@@ -70,3 +65,10 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+
+.carousel-example img {
+    width: 200px;
+}
+</style>

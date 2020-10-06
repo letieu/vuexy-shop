@@ -86,4 +86,9 @@ class ProductService
     {
         return $this->commentRepo->listComments($id);
     }
+
+    public function new()
+    {
+        return $this->productRepo->topNew();
+    }
 }

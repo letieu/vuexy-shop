@@ -89,4 +89,9 @@ class ProductController extends Controller
 
         return $this->success($comment);
     }
+
+    public function new()
+    {
+        return $this->success($this->productService->new());
+    }
 }

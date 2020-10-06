@@ -1,13 +1,13 @@
 <template>
     <div class="related-products text-center px-6">
 
-        <div class="related-headings mb-8 text-center">
-            <h2 class="uppercase">Sản phẩm liên quan</h2>
+        <div class="related-headings mb-4 text-center">
+            <h2 class="uppercase">Sản phẩm mới</h2>
             <p>Mọi người cũng tìm kiếm</p>
         </div>
         <swiper :options="swiperOption" :dir="$vs.rtl ? 'rtl' : 'ltr'" :key="$vs.rtl"
                 class="related-product-swiper px-12 py-6">
-            <swiper-slide v-for="item in related_items" :key="item.objectId" class="p-6 rounded cursor-pointer">
+            <swiper-slide v-for="item in items" :key="item.objectId" class="p-6 rounded cursor-pointer">
 
                 <!-- Item Heading -->
                 <div class="item-heading mb-4">
@@ -20,14 +20,12 @@
 
                 <!-- Item Image -->
                 <div class="img-container w-32 mx-auto my-base">
-                    <img class="responsive" :src="item.image" :alt="item.name">
+                    <img class="responsive" :src="'/images/' + item.image" :alt="item.name">
                 </div>
 
                 <!-- Item Meta -->
                 <div class="item-meta">
-                    <star-rating :show-rating="false" :rating="item.rating" :star-size="14" class="justify-center"
-                                 read-only/>
-                    <p class="text-lg font-medium text-primary">${{ item.price }}</p>
+                    <p class="text-lg font-medium text-primary">{{ item.price }} đ</p>
                 </div>
             </swiper-slide>
             <div class="swiper-button-prev" slot="button-prev"></div>
@@ -75,67 +73,16 @@ export default {
             // Below is data which is common in any item
             // Algolia's dataSet don't provide this kind of data. So, here's dummy data for demo
             is_hearted: false,
-
-            related_items: [{
-                "name": "Apple - Apple Watch Series 1 42mm Space Gray Aluminum Case Black Sport Band - Space Gray Aluminum",
-                "brand": "Apple",
-                "price": 229,
-                "image": "https://pixinvent.com/demo/vuexy-vuejs-admin-dashboard-template/products/01.png",
-                "rating": 4,
-                "objectID": "5546604",
-            },
-                {
-                    "name": "Beats by Dr. Dre - Powerbeats2 Wireless Earbud Headphones - Black/Red",
-                    "brand": "Beats by Dr. Dre",
-                    "price": 199.99,
-                    "image": "https://pixinvent.com/demo/vuexy-vuejs-admin-dashboard-template/products/08.png",
-                    "rating": 4,
-                    "objectID": "5565002",
-                },
-                {
-                    "name": "Amazon - Fire TV Stick with Alexa Voice Remote - Black",
-                    "brand": "Amazon",
-                    "price": 39.99,
-                    "image": "https://pixinvent.com/demo/vuexy-vuejs-admin-dashboard-template/products/03.png",
-                    "rating": 4,
-                    "objectID": "5477500",
-                },
-                {
-                    "name": "Apple - Apple Watch Nike+ 42mm Silver Aluminum Case Silver/Volt Nike Sport Band - Silver Aluminum",
-                    "brand": "Apple",
-                    "price": 399,
-                    "image": "https://pixinvent.com/demo/vuexy-vuejs-admin-dashboard-template/products/07.png",
-                    "rating": 4,
-                    "objectID": "5547700",
-                },
-                {
-                    "name": "Google - Chromecast Ultra - Black",
-                    "brand": "Google",
-                    "price": 69.99,
-                    "image": "https://pixinvent.com/demo/vuexy-vuejs-admin-dashboard-template/products/05.png",
-                    "rating": 4,
-                    "objectID": "5578628",
-                },
-                {
-                    "name": "Beats by Dr. Dre - Beats EP Headphones - White",
-                    "brand": "Beats by Dr. Dre",
-                    "price": 129.99,
-                    "image": "https://pixinvent.com/demo/vuexy-vuejs-admin-dashboard-template/products/02.png",
-                    "rating": 4,
-                    "objectID": "5577781",
-                },
-                {
-                    "name": "LG - 40\" Class (39.5\" Diag.) - LED - 1080p - HDTV - Black",
-                    "brand": "LG",
-                    "price": 279.99,
-                    "image": "https://pixinvent.com/demo/vuexy-vuejs-admin-dashboard-template/products/09.png",
-                    "rating": 4,
-                    "objectID": "5613404",
-                }]
+            items: []
         }
     },
+
     components: {
         swiper, swiperSlide, StarRating
+    },
+    mounted() {
+       this.$store.dispatch('product/newProducts')
+        .then(res => this.items = res.data.data)
     }
 }
 </script>

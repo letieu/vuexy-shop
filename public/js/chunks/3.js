@@ -962,9 +962,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
 
 
 
@@ -984,7 +981,6 @@ __webpack_require__.r(__webpack_exports__);
   components: {
     Logo: _Logo_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
     Bookmarks: _components_Bookmarks_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
-    SearchBar: _components_SearchBar_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
     NotificationDropDown: _components_NotificationDropDown_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
     ProfileDropDown: _components_ProfileDropDown_vue__WEBPACK_IMPORTED_MODULE_3__["default"]
   },
@@ -3890,29 +3886,22 @@ var render = function() {
             attrs: { color: _vm.navbarColor }
           },
           [
-            _vm.windowWidth >= 992
-              ? _c("bookmarks", { attrs: { navbarColor: _vm.navbarColor } })
-              : _vm._e(),
-            _vm._v(" "),
             _c(
               "router-link",
               {
                 staticClass: "vx-logo cursor-pointer mx-auto flex items-center",
+                staticStyle: {
+                  height: "40px",
+                  "margin-left": "5px !important"
+                },
                 attrs: { tag: "div", to: "/" }
               },
               [
-                _c("logo", {
-                  staticClass: "w-10 mr-4 fill-current text-primary"
-                }),
-                _vm._v(" "),
-                _c("span", { staticClass: "vx-logo-text text-primary" }, [
-                  _vm._v("Vuexy")
-                ])
-              ],
-              1
+                _c("img", {
+                  attrs: { src: __webpack_require__(/*! @assets/images/logo.png */ "./resources/assets/images/logo.png") }
+                })
+              ]
             ),
-            _vm._v(" "),
-            _c("search-bar"),
             _vm._v(" "),
             _c("notification-drop-down"),
             _vm._v(" "),
@@ -5604,6 +5593,17 @@ var staticRenderFns = []
 render._withStripped = true
 
 
+
+/***/ }),
+
+/***/ "./resources/assets/images/logo.png":
+/*!******************************************!*\
+  !*** ./resources/assets/images/logo.png ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/logo.png?fee3e040ca87ec348b3ca6f6572bc0f2";
 
 /***/ }),
 

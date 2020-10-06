@@ -74,6 +74,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -186,21 +189,6 @@ var render = function() {
     [
       _c(
         "router-link",
-        { attrs: { to: "/dashboard/product" } },
-        [
-          _c("vs-list-item", {
-            attrs: {
-              "icon-pack": "feather",
-              icon: "icon-archive",
-              title: "Sản phẩm"
-            }
-          })
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "router-link",
         { attrs: { to: "/dashboard/category" } },
         [
           _c("vs-list-item", {
@@ -238,6 +226,21 @@ var render = function() {
               "icon-pack": "feather",
               icon: "icon-truck",
               title: "Đơn hàng"
+            }
+          })
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "router-link",
+        { attrs: { to: "/dashboard/product" } },
+        [
+          _c("vs-list-item", {
+            attrs: {
+              "icon-pack": "feather",
+              icon: "icon-truck",
+              title: "Sản phẩm"
             }
           })
         ],

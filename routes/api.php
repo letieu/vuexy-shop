@@ -29,6 +29,7 @@ Route::prefix('users')->name('user.')->group(function () {
 });
 
 Route::prefix('products')->name('products.')->group(function () {
+    Route::get('/new', [App\Http\Controllers\ProductController::class, 'new']);
     Route::get('/find', [App\Http\Controllers\ProductController::class, 'findByIds'])->name('find-ids');
     Route::post('/{id}/comments', [App\Http\Controllers\ProductController::class, 'createComment']);
     Route::get('/{id}/comments', [App\Http\Controllers\ProductController::class, 'comments']);

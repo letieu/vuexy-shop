@@ -51,8 +51,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 
 
 
@@ -88,62 +86,20 @@ __webpack_require__.r(__webpack_exports__);
       // Below is data which is common in any item
       // Algolia's dataSet don't provide this kind of data. So, here's dummy data for demo
       is_hearted: false,
-      related_items: [{
-        "name": "Apple - Apple Watch Series 1 42mm Space Gray Aluminum Case Black Sport Band - Space Gray Aluminum",
-        "brand": "Apple",
-        "price": 229,
-        "image": "https://pixinvent.com/demo/vuexy-vuejs-admin-dashboard-template/products/01.png",
-        "rating": 4,
-        "objectID": "5546604"
-      }, {
-        "name": "Beats by Dr. Dre - Powerbeats2 Wireless Earbud Headphones - Black/Red",
-        "brand": "Beats by Dr. Dre",
-        "price": 199.99,
-        "image": "https://pixinvent.com/demo/vuexy-vuejs-admin-dashboard-template/products/08.png",
-        "rating": 4,
-        "objectID": "5565002"
-      }, {
-        "name": "Amazon - Fire TV Stick with Alexa Voice Remote - Black",
-        "brand": "Amazon",
-        "price": 39.99,
-        "image": "https://pixinvent.com/demo/vuexy-vuejs-admin-dashboard-template/products/03.png",
-        "rating": 4,
-        "objectID": "5477500"
-      }, {
-        "name": "Apple - Apple Watch Nike+ 42mm Silver Aluminum Case Silver/Volt Nike Sport Band - Silver Aluminum",
-        "brand": "Apple",
-        "price": 399,
-        "image": "https://pixinvent.com/demo/vuexy-vuejs-admin-dashboard-template/products/07.png",
-        "rating": 4,
-        "objectID": "5547700"
-      }, {
-        "name": "Google - Chromecast Ultra - Black",
-        "brand": "Google",
-        "price": 69.99,
-        "image": "https://pixinvent.com/demo/vuexy-vuejs-admin-dashboard-template/products/05.png",
-        "rating": 4,
-        "objectID": "5578628"
-      }, {
-        "name": "Beats by Dr. Dre - Beats EP Headphones - White",
-        "brand": "Beats by Dr. Dre",
-        "price": 129.99,
-        "image": "https://pixinvent.com/demo/vuexy-vuejs-admin-dashboard-template/products/02.png",
-        "rating": 4,
-        "objectID": "5577781"
-      }, {
-        "name": "LG - 40\" Class (39.5\" Diag.) - LED - 1080p - HDTV - Black",
-        "brand": "LG",
-        "price": 279.99,
-        "image": "https://pixinvent.com/demo/vuexy-vuejs-admin-dashboard-template/products/09.png",
-        "rating": 4,
-        "objectID": "5613404"
-      }]
+      items: []
     };
   },
   components: {
     swiper: vue_awesome_swiper__WEBPACK_IMPORTED_MODULE_0__["swiper"],
     swiperSlide: vue_awesome_swiper__WEBPACK_IMPORTED_MODULE_0__["swiperSlide"],
     StarRating: vue_star_rating__WEBPACK_IMPORTED_MODULE_2___default.a
+  },
+  mounted: function mounted() {
+    var _this = this;
+
+    this.$store.dispatch('product/newProducts').then(function (res) {
+      return _this.items = res.data.data;
+    });
   }
 });
 
@@ -227,7 +183,7 @@ var render = function() {
           attrs: { options: _vm.swiperOption, dir: _vm.$vs.rtl ? "rtl" : "ltr" }
         },
         [
-          _vm._l(_vm.related_items, function(item) {
+          _vm._l(_vm.items, function(item) {
             return _c(
               "swiper-slide",
               { key: item.objectId, staticClass: "p-6 rounded cursor-pointer" },
@@ -252,33 +208,16 @@ var render = function() {
                   [
                     _c("img", {
                       staticClass: "responsive",
-                      attrs: { src: item.image, alt: item.name }
+                      attrs: { src: "/images/" + item.image, alt: item.name }
                     })
                   ]
                 ),
                 _vm._v(" "),
-                _c(
-                  "div",
-                  { staticClass: "item-meta" },
-                  [
-                    _c("star-rating", {
-                      staticClass: "justify-center",
-                      attrs: {
-                        "show-rating": false,
-                        rating: item.rating,
-                        "star-size": 14,
-                        "read-only": ""
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c(
-                      "p",
-                      { staticClass: "text-lg font-medium text-primary" },
-                      [_vm._v("$" + _vm._s(item.price))]
-                    )
-                  ],
-                  1
-                )
+                _c("div", { staticClass: "item-meta" }, [
+                  _c("p", { staticClass: "text-lg font-medium text-primary" }, [
+                    _vm._v(_vm._s(item.price) + " đ")
+                  ])
+                ])
               ]
             )
           }),
@@ -306,8 +245,8 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "related-headings mb-8 text-center" }, [
-      _c("h2", { staticClass: "uppercase" }, [_vm._v("Sản phẩm liên quan")]),
+    return _c("div", { staticClass: "related-headings mb-4 text-center" }, [
+      _c("h2", { staticClass: "uppercase" }, [_vm._v("Sản phẩm mới")]),
       _vm._v(" "),
       _c("p", [_vm._v("Mọi người cũng tìm kiếm")])
     ])

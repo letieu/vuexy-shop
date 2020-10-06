@@ -112,7 +112,7 @@
 
                 <vs-divider />
 
-                <vs-button class="mt-10">THÊM VÀO GIỎ HÀNG</vs-button>
+                <vs-button class="mt-10" @click="addToCart">THÊM VÀO GIỎ HÀNG</vs-button>
               </div>
             </div>
           </div>
@@ -246,6 +246,10 @@ export default {
            comment: this.commentInput,
            id: this.id
         })
+      },
+
+      addToCart() {
+        this.$store.dispatch('cart/addToCart', this.item_data)
       }
   },
   created() {

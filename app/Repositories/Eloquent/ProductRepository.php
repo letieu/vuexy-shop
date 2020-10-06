@@ -46,4 +46,8 @@ class ProductRepository extends BaseRepository implements ProductRepositoryInter
         return $this->model->whereIn('id', $ids)->get();
     }
 
+    public function topNew()
+    {
+        return $this->model->orderBy('created_at')->get();
+    }
 }

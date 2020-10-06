@@ -14,7 +14,11 @@ class ImageHelper
 
         $image = $request->get('image');
         $name = time().'.' . explode('/', explode(':', substr($image, 0, strpos($image, ';')))[1])[1];
-        Image::make($request->get('image'))->save(public_path('images/').$name);
+        try {
+            Image::make($request->get('image'))->save(public_path('images/').$name);
+        } catch (\Exception $ex) {
+            dd($ex);
+        }
 
         return $name;
     }

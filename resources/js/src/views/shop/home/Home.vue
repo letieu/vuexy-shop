@@ -1,12 +1,13 @@
 <template>
   <div class="shop">
+      <banner ></banner>
     <div class="products flex">
-      <div class="w-1/5">
+      <div class="w-1/5 mt-8">
         <shop-filter @fill="filterChange"></shop-filter>
       </div>
       <div class="w-4/5 pl-10 mr-10">
         <!-- BANNER  -->
-        <banner></banner>
+
 
         <!-- SEARCH -->
         <div class="relative mb-8 mt-8">

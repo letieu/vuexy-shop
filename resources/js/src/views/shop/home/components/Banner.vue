@@ -1,9 +1,10 @@
 <template>
-  <div class="carousel-example">
+  <div class="carousel-example" style="border-radius: 10px;">
     <swiper
       :options="swiperOption"
       :dir="$vs.rtl ? 'rtl' : 'ltr'"
       :key="$vs.rtl"
+      style="height: 400px; overflow: hidden"
     >
       <swiper-slide>
         <img
@@ -16,7 +17,7 @@
       <swiper-slide>
         <img
           class="responsive"
-          src="@assets/images/banner/banner-1.jpg"
+          src="@assets/images/banner/banner-2.jpg"
           alt="banner"
         />
       </swiper-slide>
@@ -30,14 +31,14 @@
       <swiper-slide>
         <img
           class="responsive"
-          src="@assets/images/banner/banner-1.jpg"
+          src="@assets/images/banner/banner-2.jpg"
           alt="banner"
         />
       </swiper-slide>
 
     </swiper>
-      
-     
+
+
   </div>
 </template>
 
@@ -72,4 +73,9 @@ export default {
   },
 };
 </script>
-          
+
+<style scoped>
+.carousel-example img {
+    height: 400px;
+}
+</style>

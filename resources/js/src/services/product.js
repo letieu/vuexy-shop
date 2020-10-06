@@ -45,5 +45,10 @@ export default {
     async getComments(id)
     {
         return await axios.get(`api/products/${id}/comments`)
+    },
+
+    async newProducts()
+    {
+        return await axios.get('api/products/new')
     }
 }

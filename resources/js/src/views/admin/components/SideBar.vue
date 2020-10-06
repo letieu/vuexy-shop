@@ -1,8 +1,6 @@
 <template>
     <vs-list class="vx-card">
-        <router-link to="/dashboard/product">
-            <vs-list-item icon-pack="feather" icon="icon-archive" title="Sản phẩm"></vs-list-item>
-        </router-link>
+
         <router-link to="/dashboard/category">
             <vs-list-item icon-pack="feather" icon="icon-bookmark" title="Thể loại"></vs-list-item>
         </router-link>
@@ -13,6 +11,11 @@
 
         <router-link to="/dashboard/order">
             <vs-list-item icon-pack="feather" icon="icon-truck" title="Đơn hàng"></vs-list-item>
+        </router-link>
+
+
+        <router-link to="/dashboard/product">
+            <vs-list-item icon-pack="feather" icon="icon-truck" title="Sản phẩm"></vs-list-item>
         </router-link>
     </vs-list>
 </template>

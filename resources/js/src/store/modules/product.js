@@ -87,6 +87,11 @@ const actions = {
         let res = await product.createComment(comment, id)
         commit('ADD_COMMENT', res.data.data)
         return res
+    },
+
+    async newProducts({commit}) {
+        let res = await product.newProducts()
+        return res
     }
 }
 
