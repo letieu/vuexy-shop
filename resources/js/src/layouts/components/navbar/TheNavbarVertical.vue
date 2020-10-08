@@ -38,7 +38,7 @@
 <script>
 import Bookmarks            from "./components/Bookmarks.vue"
 import SearchBar            from "./components/SearchBar.vue"
-import NotificationDropDown from "./components/NotificationDropDown.vue"
+import NotificationDropDown from "./components/CartDropDown.vue"
 import ProfileDropDown      from "./components/ProfileDropDown.vue"
 
 export default {

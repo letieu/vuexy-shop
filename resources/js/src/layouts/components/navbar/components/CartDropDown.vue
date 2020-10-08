@@ -14,7 +14,7 @@
         <ul class="bordered-items">
           <li v-for="(ntf, index) in items" :key="ntf.id" class="flex justify-between px-4 py-4 notification cursor-pointer">
             <div class="flex items-start">
-              <img :src="'images/' + ntf.image"  alt="img" title="img" width="50"/>
+              <img :src="'/images/' + ntf.image"  alt="img" title="img" width="50"/>
                 <span class="pl-3 pr-3">{{ntf.name}}</span>
             </div>
             <vs-chip color="success">{{ quantities[index].quantity }}</vs-chip>

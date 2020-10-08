@@ -69701,7 +69701,6 @@ var getters = {
   },
   total: function total(state) {
     var total = 0;
-    console.log(state.item_quantity);
 
     for (var i = 0; i < state.item_quantity.length; i++) {
       total += state.item_quantity[i].quantity * state.items[i].price;

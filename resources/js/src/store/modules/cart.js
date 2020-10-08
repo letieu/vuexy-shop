@@ -14,7 +14,6 @@ const getters = {
     },
     total(state) {
         let total = 0;
-        console.log(state.item_quantity)
         for (let i=0; i < state.item_quantity.length; i++) {
            total += state.item_quantity[i].quantity * state.items[i].price
         }
