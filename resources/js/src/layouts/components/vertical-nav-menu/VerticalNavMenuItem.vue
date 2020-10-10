@@ -28,10 +28,10 @@
           <slot />
       </router-link>
 
-      <a v-else :target="target" :href="href" tabindex="-1">
-        <vs-icon v-if="!featherIcon" :icon-pack="iconPack" :icon="icon" />
-        <feather-icon v-else :class="{'w-3 h-3': iconSmall}" :icon="icon" />
-        <slot />
+      <a v-else :target="target" :href="href" tabindex="-1" @click="fill">
+          <font-awesome-icon :icon="['fas', icon]" style="font-size: 22px"/>
+
+          <slot />
       </a>
   </div>
 </template>
@@ -40,7 +40,7 @@
 export default {
   name: 'v-nav-menu-item',
   props: {
-    icon        : { type: String,                 default: ""               },
+    icon        : { type: String,                 default: "user-secret"               },
     iconSmall   : { type: Boolean,                default: false            },
     iconPack    : { type: String,                 default: 'material-icons' },
     href        : { type: [String, null],         default: '#'              },
@@ -50,12 +50,22 @@ export default {
     featherIcon : { type: Boolean,                default: true             },
     target      : { type: String,                 default: '_self'          },
     isDisabled  : { type: Boolean,                default: false            },
+      id        : {type: Number}
   },
   computed: {
     activeLink() {
-      return ((this.to == this.$route.path) || (this.$route.meta.parent == this.slug) && this.to) ? true : false
+      return this.id == this.$store.state.product.filter.category
     }
-  }
+  },
+    methods: {
+      fill() {
+          let filter = {...this.$store.state.product.filter};
+
+          filter.category = this.id
+          filter.page = 1
+          this.$store.dispatch('product/fetchProducts', filter)
+      }
+    }
 }
 
 </script>

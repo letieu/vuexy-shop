@@ -71,7 +71,7 @@
             :icon   = "itemIcon(groupIndex + '.' + index)"
             :slug   = "groupItem.slug"
             :target = "groupItem.target">
-              <span class="truncate">{{  groupItem.name }}</span>
+              <span class="truncate" style="margin-left: 20px">{{  groupItem.name }}</span>
               <vs-chip class="ml-auto" :color="groupItem.tagColor" v-if="groupItem.tag">{{ groupItem.tag }}</vs-chip>
           </v-nav-menu-item>
 
@@ -236,5 +236,8 @@ export default {
 
 
 <style lang="scss">
-@import "@sass/vuexy/components/verticalNavMenuGroup.scss"
+@import "@sass/vuexy/components/verticalNavMenuGroup.scss";
+.truncate {
+    margin-left: 10px;
+}
 </style>

@@ -17,13 +17,16 @@
       <vs-navbar class="vx-navbar navbar-custom navbar-skelton" :color="navbarColorLocal" :class="textColor">
 
         <!-- SM - OPEN SIDEBAR BUTTON -->
-        <feather-icon class="sm:inline-flex xl:hidden cursor-pointer p-2" icon="MenuIcon" @click.stop="showSidebar" />
+        <div class="flex">
+            <span @click="fill(null)"><vs-chip color="primary" class="mr-10 branch" :class="{'active': active == null}">Tất cả thương hiệu</vs-chip></span>
 
-        <bookmarks :navbarColor="navbarColor" v-if="windowWidth >= 992" />
+            <span v-for="branch in branches" :key="branch.id" @click="fill(branch.id)">
+            <vs-chip color="primary" class="mr-10 branch" :class="{'active': active == branch.id}">{{ branch.name }}</vs-chip>
+            </span>
+            <vs-chip color="dark" class="ml-10">Kết quả tìm kiếm ({{$store.state.product.all.length}})</vs-chip>
+        </div>
 
         <vs-spacer />
-
-        <search-bar />
 
         <notification-drop-down />
 
@@ -43,6 +46,11 @@ import ProfileDropDown      from "./components/ProfileDropDown.vue"
 
 export default {
   name: "the-navbar-vertical",
+    data() {
+      return {
+          active: null
+      }
+    },
   props: {
     navbarColor: {
       type: String,
@@ -56,6 +64,9 @@ export default {
     ProfileDropDown,
   },
   computed: {
+      branches() {
+        return this.$store.state.branch.all
+      },
     navbarColorLocal() {
       return this.$store.state.theme === "dark" && this.navbarColor === "#fff" ? "#10163a" : this.navbarColor
     },
@@ -79,8 +90,28 @@ export default {
   methods: {
     showSidebar() {
       this.$store.commit('TOGGLE_IS_VERTICAL_NAV_MENU_ACTIVE', true);
+    },
+      fill(branchId) {
+        this.active = branchId
+        let filter = {...this.$store.state.product.filter}
+        filter.page = 1
+        filter.branch = branchId
+
+        this.$store.dispatch('product/fetchProducts', filter)
+      }
+  },
+    mounted() {
+      this.$store.dispatch('branch/fetchBranches')
     }
-  }
 }
 </script>
+<style scopped>
+.active {
+    border:3px solid blue;
+    background: yellowgreen;
+}
+.branch {
+    cursor: pointer;
+}
+</style>
 

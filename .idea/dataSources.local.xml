@@ -16,7 +16,7 @@
       </schema-mapping>
     </data-source>
     <data-source name="vuexy-shop" uuid="2e4bb827-954e-4f63-a9c3-1444115ba31f">
-      <database-info product="MySQL" version="5.5.5-10.5.5-MariaDB" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-java-8.0.21 (Revision: 33f65445a1bcc544eb0120491926484da168f199)" dbms="MARIADB" exact-version="10.5.5" exact-driver-version="8.0">
+      <database-info product="MySQL" version="5.5.5-10.5.6-MariaDB" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-java-8.0.21 (Revision: 33f65445a1bcc544eb0120491926484da168f199)" dbms="MARIADB" exact-version="10.5.6" exact-driver-version="8.0">
         <extra-name-characters>#@</extra-name-characters>
         <identifier-quote-string>`</identifier-quote-string>
       </database-info>

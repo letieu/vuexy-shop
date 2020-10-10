@@ -30,8 +30,13 @@ export default {
     mounted() {
         this.$store.dispatch('category/fetchCategories')
         this.$store.dispatch('branch/fetchBranches')
-
-        console.log('dash board')
+        this.$store.dispatch('auth/me').then(res => {
+            if (this.$store.state.auth.user == null || this.$store.state.auth.user.email != 'admin@shop.com' ) {
+                this.$router.push('/')
+            }
+        }).catch(error => {
+            this.$router.push('/')
+        })
     }
 }
 

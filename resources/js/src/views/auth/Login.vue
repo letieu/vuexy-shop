@@ -7,16 +7,12 @@
 
                     <div class="vx-row no-gutter justify-center items-center">
 
-                        <div class="vx-col hidden lg:block lg:w-1/2">
-                            <img src="@assets/images/pages/login.png" alt="login" class="mx-auto">
-                        </div>
-
                         <div class="vx-col sm:w-full md:w-full lg:w-1/2 d-theme-dark-bg">
                             <div class="p-8 login-tabs-container">
 
                                 <div class="vx-card__title mb-4">
                                     <h4 class="mb-4">Login</h4>
-                                    <p>Chào mừng bạn quay lại, Hãy đăng nhập để mua hàng </p>
+                                    <p>Chào mừng đến với V-shop</p>
                                 </div>
 
                                 <div>
@@ -74,9 +70,9 @@
 
                                    <template v-if="!registering">
                                        <div class="flex flex-wrap justify-between my-5">
-                                           <vs-checkbox v-model="checkbox_remember_me" class="mb-3">Ghi nhớ 
+                                           <vs-checkbox v-model="checkbox_remember_me" class="mb-3">Ghi nhớ
                                            </vs-checkbox>
-                                        
+
                                        </div>
                                        <vs-button type="border" @click="registering = true">Đăng ký</vs-button>
                                        <vs-button class="float-right" @click="submit">Đăng nhập </vs-button>

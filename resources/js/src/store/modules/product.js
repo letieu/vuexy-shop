@@ -34,6 +34,9 @@ const mutations = {
     SET_COMMENTS(state, comments)
     {
         state.comments = comments
+    },
+    PUSH_PRODUCTS(state, products) {
+        state.all = state.all.concat(products)
     }
 }
 
@@ -44,10 +47,17 @@ const getters = {
 }
 
 const actions = {
-    async fetchProducts({commit}, params) {
+    async fetchProducts({commit}, params = {}) {
         if (! ('perPage' in params)) params.perPage = 12
         let res = await product.getAll(params)
-        commit('SET_PRODUCTS', res.data.data.data)
+        if (res.data.data.current_page == 1) {
+            commit('SET_PRODUCTS', res.data.data.data)
+            params.page = 1
+        } else {
+            commit('PUSH_PRODUCTS', res.data.data.data)
+            params.page ++
+        }
+
         commit('SET_FILTERS', params)
 
         return res.data.data

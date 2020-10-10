@@ -14,12 +14,50 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d1ff725-d7b5-4b4e-aca4-a9c4bd99c895" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/js/src/views/shop/home/Home2.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/src/views/shop/home/fashionComponents/HotProduct.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2e4bb827-954e-4f63-a9c3-1444115ba31f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/2e4bb827-954e-4f63-a9c3-1444115ba31f.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/portrait/small/avatar-s-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/portrait/small/avatar-s-1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/chunks/1.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/chunks/1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/chunks/11.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/chunks/11.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/chunks/12.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/chunks/12.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/chunks/13.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/chunks/13.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/chunks/14.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/chunks/14.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/chunks/15.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/chunks/15.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/chunks/16.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/chunks/16.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/chunks/17.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/chunks/17.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/chunks/18.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/chunks/18.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/chunks/2.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/chunks/2.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/chunks/3.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/chunks/3.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/src/layouts/components/navbar/TheNavbarHorizontal.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/layouts/components/navbar/TheNavbarHorizontal.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/chunks/4.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/chunks/4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/chunks/5.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/chunks/5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/chunks/6.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/chunks/6.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/chunks/7.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/chunks/7.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/chunks/8.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/chunks/8.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/images/portrait/small/avatar-s-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/images/portrait/small/avatar-s-1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/images/portrait/small/avatar-s-21.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/src/layouts/components/navbar/TheNavbarVertical.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/layouts/components/navbar/TheNavbarVertical.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/src/layouts/components/navbar/components/NotificationDropDown.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/layouts/components/navbar/components/CartDropDown.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/src/layouts/components/navbar/components/ProfileDropDown.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/layouts/components/navbar/components/ProfileDropDown.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/src/layouts/components/vertical-nav-menu/VerticalNavMenu.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/layouts/components/vertical-nav-menu/VerticalNavMenu.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/src/layouts/components/vertical-nav-menu/VerticalNavMenuGroup.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/layouts/components/vertical-nav-menu/VerticalNavMenuGroup.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/src/layouts/components/vertical-nav-menu/VerticalNavMenuItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/layouts/components/vertical-nav-menu/VerticalNavMenuItem.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/src/layouts/components/vertical-nav-menu/navMenuItems.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/layouts/components/vertical-nav-menu/navMenuItems.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/src/layouts/main/Main.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/layouts/main/Main.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/src/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/src/store/modules/product.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/store/modules/product.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/src/views/admin/Dashboard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/views/admin/Dashboard.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/src/views/admin/DashboardCategory.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/views/admin/DashboardCategory.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/src/views/auth/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/views/auth/Login.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/src/views/shop/product/Product.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/views/shop/product/Product.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/themeConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/themeConfig.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/application.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/application.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -228,7 +266,13 @@
       <workItem from="1602036162702" duration="2000" />
       <workItem from="1602078948349" duration="2000" />
       <workItem from="1602131411239" duration="862000" />
-      <workItem from="1602153487762" duration="325000" />
+      <workItem from="1602153487762" duration="1593000" />
+      <workItem from="1602267926840" duration="5240000" />
+      <workItem from="1602309786350" duration="3779000" />
+      <workItem from="1602319508095" duration="2042000" />
+      <workItem from="1602321965440" duration="5476000" />
+      <workItem from="1602330159923" duration="2358000" />
+      <workItem from="1602333137672" duration="1434000" />
     </task>
     <servers />
   </component>
@@ -253,9 +297,10 @@
     </state>
     <state x="547" y="168" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1601999306227" />
     <state x="571" y="196" width="800" height="691" key="#com.intellij.execution.impl.EditConfigurationsDialog/33.33.1887.1047@33.33.1887.1047" timestamp="1600710955734" />
-    <state x="647" y="322" width="648" height="439" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600857341490">
-      <screen x="33" y="33" width="1887" height="1047" />
+    <state x="625" y="298" width="648" height="439" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1602268862293">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
+    <state x="625" y="298" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1602268862293" />
     <state x="647" y="322" width="648" height="439" key="#com.intellij.fileTypes.FileTypeChooser/33.33.1887.1047@33.33.1887.1047" timestamp="1600857341490" />
     <state x="737" y="141" width="464" height="804" key="#com.intellij.ide.util.MemberChooser" timestamp="1600754691274">
       <screen x="33" y="33" width="1887" height="1047" />
@@ -277,15 +322,19 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="648" y="329" key="DUMP_DIALOG_DIMENSION_KEY/0.0.1920.1080@0.0.1920.1080" timestamp="1601999466424" />
-    <state x="0" y="1060" width="1050" height="1042" key="DiffContextDialog" timestamp="1601824460000">
+    <state x="0" y="32" width="1050" height="1042" key="DiffContextDialog" timestamp="1602319663648">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="0" y="1060" width="1050" height="1042" key="DiffContextDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1601824460000" />
-    <state x="685" y="215" width="530" height="600" key="FileChooserDialogImpl" timestamp="1601864340047">
+    <state x="0" y="32" width="1050" height="1042" key="DiffContextDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1602319663648" />
+    <state x="685" y="215" width="424" height="454" key="FileChooserDialogImpl" timestamp="1602333919422">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="685" y="215" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1601864340047" />
+    <state x="685" y="215" width="424" height="454" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1602333919422" />
     <state x="706" y="241" width="530" height="600" key="FileChooserDialogImpl/33.33.1887.1047@33.33.1887.1047" timestamp="1601272310351" />
+    <state x="733" y="280" width="443" height="522" key="RollbackChangesDialog" timestamp="1602319664881">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="733" y="280" width="443" height="522" key="RollbackChangesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1602319664881" />
     <state x="336" y="57" width="1226" height="907" key="SettingsEditor" timestamp="1602131602367">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -295,10 +344,18 @@
       <screen x="33" y="33" width="1887" height="1047" />
     </state>
     <state x="782" y="290" width="390" height="520" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/33.33.1887.1047@33.33.1887.1047" timestamp="1601185069164" />
-    <state x="720" y="131" width="471" height="774" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1601830087379">
+    <state x="548" y="229" key="com.intellij.database.dbimport.ImportDialog" timestamp="1602332112741">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="720" y="131" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1601830087379" />
+    <state x="548" y="229" key="com.intellij.database.dbimport.ImportDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1602332112741" />
+    <state x="693" y="364" width="524" height="354" key="com.intellij.database.dbimport.ImportUtil.ChooseTargetDialog" timestamp="1602333761356">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="693" y="364" width="524" height="354" key="com.intellij.database.dbimport.ImportUtil.ChooseTargetDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1602333761356" />
+    <state x="720" y="129" width="471" height="774" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1602331831239">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="720" y="129" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1602331831239" />
     <state x="741" y="161" width="471" height="774" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/33.33.1887.1047@33.33.1887.1047" timestamp="1601299850384" />
     <state x="976" y="1" width="943" height="1079" key="dock-window-1" timestamp="1601062868983">
       <screen x="33" y="33" width="1887" height="1047" />
@@ -308,10 +365,10 @@
       <screen x="33" y="33" width="1887" height="1047" />
     </state>
     <state x="614" y="71" width="724" height="939" key="find.popup/33.33.1887.1047@33.33.1887.1047" timestamp="1601120064206" />
-    <state x="531" y="12" width="855" height="1067" key="search.everywhere.popup" timestamp="1602153943200">
+    <state x="531" y="12" width="855" height="1067" key="search.everywhere.popup" timestamp="1602331262835">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="531" y="12" width="855" height="1067" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1602153943200" />
+    <state x="531" y="12" width="855" height="1067" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1602331262835" />
     <state x="555" y="45" width="840" height="1034" key="search.everywhere.popup/33.33.1887.1047@33.33.1887.1047" timestamp="1601300890033" />
   </component>
 </project>

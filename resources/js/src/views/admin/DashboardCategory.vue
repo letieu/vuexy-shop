@@ -12,10 +12,13 @@
                 :is-valid="category.name"
                 :active.sync="showInput">
                 <div class="con-exemple-prompt">
-                    Tên loại sản phẩm: 
+                    Tên loại sản phẩm:
                     <vs-input placeholder="Name" v-model="category.name" class="mt-4 mb-2 w-full" />
+                    Icon:
+                    <vs-input placeholder="icon" v-model="category.icon" class="mt-4 mb-2 w-full" />
+
                     <vs-alert v-show="error" color="danger" vs-icon="new_releases" >
-                        Không được để trống 
+                        Không được để trống
                     </vs-alert>
                 </div>
             </vs-prompt>
@@ -25,6 +28,7 @@
         <template slot="thead">
             <vs-th sort-key="email">ID</vs-th>
             <vs-th sort-key="username">Thể loại </vs-th>
+            <vs-th>Icon</vs-th>
             <vs-th sort-key="website">Số sản phẩm</vs-th>
             <vs-th sort-key="id">Đã tạo</vs-th>
             <vs-th>Actions</vs-th>
@@ -39,6 +43,10 @@
 
                 <vs-td :data="data[indextr].name">
                     {{ data[indextr].name }}
+                </vs-td>
+
+                <vs-td :data="data[indextr].icon">
+                    {{ data[indextr].icon}}
                 </vs-td>
 
                 <vs-td :data="data[indextr].products_count">

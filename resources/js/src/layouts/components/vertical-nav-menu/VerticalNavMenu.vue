@@ -62,7 +62,7 @@
 
         <!-- Menu Items -->
         <VuePerfectScrollbar ref="verticalNavMenuPs" class="scroll-area-v-nav-menu pt-2" :settings="settings" @ps-scroll-y="psSectionScroll" :key="$vs.rtl">
-          <template v-for="(item, index) in menuItemsUpdated">
+          <template v-for="(item, index) in categories">
 
             <!-- Group Header -->
             <span v-if="item.header && !verticalNavMenuItemsMin" class="navigation-header truncate" :key="`header-${index}`">
@@ -80,6 +80,7 @@
                 :to="item.slug !== 'external' ? item.url : null"
                 :href="item.slug === 'external' ? item.url : null"
                 :icon="item.icon" :target="item.target"
+                :id="item.id"
                 :isDisabled="item.isDisabled"
                 :slug="item.slug">
                   <span v-show="!verticalNavMenuItemsMin" class="truncate">{{ item.name }}</span>
@@ -149,6 +150,9 @@ export default {
     showShadowBottom    : false,
   }),
   computed: {
+      categories() {
+        return [...this.$store.state.category.all, {name: 'Tất cả', id: null, icon: 'home'}]
+      },
     isGroupActive() {
       return (item) => {
         const path        = this.$route.fullPath
@@ -322,6 +326,8 @@ export default {
   },
   mounted() {
     this.setVerticalNavMenuWidth()
+
+      this.$store.dispatch('category/fetchCategories')
   },
 }
 

@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="{{ asset(mix('css/app.css')) }}">
     <!-- Favicon -->
     <link rel="shortcut icon" href="{{ asset('images/logo/favicon.png') }}">
+      <script src="https://kit.fontawesome.com/0ca42f1cd6.js" crossorigin="anonymous"></script>
+
   </head>
   <body>
     <noscript>

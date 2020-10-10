@@ -112,10 +112,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -258,20 +254,6 @@ var render = function() {
                   [
                     _c(
                       "div",
-                      { staticClass: "vx-col hidden lg:block lg:w-1/2" },
-                      [
-                        _c("img", {
-                          staticClass: "mx-auto",
-                          attrs: {
-                            src: __webpack_require__(/*! @assets/images/pages/login.png */ "./resources/assets/images/pages/login.png"),
-                            alt: "login"
-                          }
-                        })
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
                       {
                         staticClass:
                           "vx-col sm:w-full md:w-full lg:w-1/2 d-theme-dark-bg"
@@ -283,11 +265,7 @@ var render = function() {
                               _vm._v("Login")
                             ]),
                             _vm._v(" "),
-                            _c("p", [
-                              _vm._v(
-                                "Chào mừng bạn quay lại, Hãy đăng nhập để mua hàng "
-                              )
-                            ])
+                            _c("p", [_vm._v("Chào mừng đến với V-shop")])
                           ]),
                           _vm._v(" "),
                           _c(
@@ -451,7 +429,7 @@ var render = function() {
                                           },
                                           [
                                             _vm._v(
-                                              "Ghi nhớ \n                                       "
+                                              "Ghi nhớ\n                                       "
                                             )
                                           ]
                                         )
@@ -527,17 +505,6 @@ var staticRenderFns = []
 render._withStripped = true
 
 
-
-/***/ }),
-
-/***/ "./resources/assets/images/pages/login.png":
-/*!*************************************************!*\
-  !*** ./resources/assets/images/pages/login.png ***!
-  \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/images/login.png?d814adb752d2d047b8292d6de603025f";
 
 /***/ }),
 

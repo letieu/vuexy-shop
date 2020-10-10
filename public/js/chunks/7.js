@@ -36,9 +36,17 @@ __webpack_require__.r(__webpack_exports__);
   },
   created: function created() {},
   mounted: function mounted() {
+    var _this = this;
+
     this.$store.dispatch('category/fetchCategories');
     this.$store.dispatch('branch/fetchBranches');
-    console.log('dash board');
+    this.$store.dispatch('auth/me').then(function (res) {
+      if (_this.$store.state.auth.user == null || _this.$store.state.auth.user.email != 'admin@shop.com') {
+        _this.$router.push('/');
+      }
+    }).catch(function (error) {
+      _this.$router.push('/');
+    });
   }
 });
 

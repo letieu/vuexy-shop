@@ -118,47 +118,8 @@
           </div>
 
           <!-- Product Feature/Meta Row -->
-          <div class="py-24 mb-16 mt-10 text-center item-features">
-            <div class="vx-row">
-              <div class="vx-col md:w-1/3 w-full">
-                <div class="w-64 mx-auto mb-16 md:mb-0">
-                  <feather-icon
-                    icon="AwardIcon"
-                    svgClasses="h-12 w-12 text-primary stroke-current"
-                    class="block mb-4"
-                  />
-                  <span class="font-semibold text-lg">100% chính hãng </span>
-                  <p class="mt-2">Được nhập khẩu trực tiếp từ kho hàng</p>
-                </div>
-              </div>
-              <div class="vx-col md:w-1/3 w-full">
-                <div class="w-64 mx-auto mb-16 md:mb-0">
-                  <feather-icon
-                    icon="ClockIcon"
-                    svgClasses="h-12 w-12 text-primary stroke-current"
-                    class="block mb-4"
-                  />
-                  <span class="font-semibold text-lg">10 ngày 1 đổi 1</span>
-                  <p class="mt-2">
-                    Hệ thống đổi trả, chăm sóc khác hàng chu đáo
-                  </p>
-                </div>
-              </div>
-              <div class="vx-col md:w-1/3 w-full">
-                <div class="w-64 mx-auto">
-                  <feather-icon
-                    icon="ShieldIcon"
-                    svgClasses="h-12 w-12 text-primary stroke-current"
-                    class="block mb-4"
-                  />
-                  <span class="font-semibold text-lg"
-                    >20 chi nhánh toàn quốc</span
-                  >
-                  <p class="mt-2">Hệ thống cửa hành rộng lớn toàn quốc</p>
-                </div>
-              </div>
-            </div>
-          </div>
+
+            <ProductSlider></ProductSlider>
         </div>
       </template>
     </vx-card>
@@ -182,7 +143,6 @@
       </div>
     </vx-card>
 
-    <ProductSlider></ProductSlider>
   </div>
 </template>
 
